@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.11.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  },
+  "name": "nodemon",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "node Server.js"
+  },
+  "author": "Israr",
+  "license": "ISC",
+  "description": "portfolio backend",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/israrahmad831/My-Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/israrahmad831/My-Portfolio/issues"
+  },
+  "homepage": "https://github.com/israrahmad831/My-Portfolio#readme"
+}
