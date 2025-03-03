@@ -3,25 +3,21 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold">My Portfolio</div>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="#home" className="text-gray-300 hover:text-white">Home</a>
-          </li>
-          <li>
-            <a href="#about" className="text-gray-300 hover:text-white">About</a>
-          </li>
-          <li>
-            <a href="#projects" className="text-gray-300 hover:text-white">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" className="text-gray-300 hover:text-white">Contact</a>
-          </li>
+    <div className="flex flex-row justify-between w-full h-full">
+      <div className="w-full h-full pt-3 pl-3">
+        logo
+      </div>
+      <div className="w-full h-full flex justify-end pt-3">
+        <ul className="flex flex-row gap-5 pr-3">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Experience</li>
+          <li>Projects</li>
+          <li>Resume</li>
         </ul>
       </div>
-    </nav>
+    </div>
     </>
   );
 };
