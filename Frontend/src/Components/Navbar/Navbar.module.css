@@ -1,0 +1,120 @@
+.navbar {
+  background-color: rgb(246, 250, 250);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+.logo {
+  font-size: 1.5rem;
+  margin: 1.5rem 1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, blue, #af30e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.elements {
+  display: flex;
+}
+.elements_list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.elements_type {
+  margin: 1.7rem 1rem;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  width: 100%;
+}
+
+.elements_type {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight:300;
+  cursor: pointer;
+}
+
+.elements_type::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, blue, #af30e8);
+  transition: width 0.3s ease-in-out;
+}
+.elements_type:hover {
+  background: linear-gradient(45deg, blue, #af30e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.elements_type:hover::after {
+  width: 100%;
+}
+
+.elements_contact {
+  margin: 1.7rem 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  background: linear-gradient(45deg, blue, #af30e8);
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.elements_contact:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.color_mode {
+  font-size: 2rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.color_mode:hover {
+  transform: scale(1.3);
+  transition: transform 0.5s;
+}
+
+body {
+  background-color: rgb(246, 250, 250);
+  color: black;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar {
+  background-color: rgb(246, 250, 250);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.dark .navbar {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .elements_type {
+  color: white;
+}
+
+.dark .color_mode {
+  color: white;
+}
