@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  z-index: 1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
 }
@@ -38,7 +39,7 @@
   display: inline-block;
   text-decoration: none;
   color: black;
-  font-weight:300;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -66,6 +67,7 @@
 
 .elements_contact {
   margin: 1.7rem 1rem;
+  margin-right: 0;
   font-size: 1.2rem;
   text-decoration: none;
   width: 100%;
@@ -82,7 +84,7 @@
 
 .color_mode {
   font-size: 2rem;
-  margin-right: 2rem;
+  margin: 1.7rem 1rem;
   cursor: pointer;
 }
 .color_mode:hover {
@@ -115,6 +117,29 @@ body {
   color: white;
 }
 
+.dark .elements_type:hover {
+  -webkit-text-fill-color: white;
+}
+
+.dark .elements_contact {
+  background: linear-gradient(45deg, #af30e8, blue);
+}
+
 .dark .color_mode {
   color: white;
+}
+.menu_bar {
+  display: none;
+}
+@media (max-width: 800px) {
+  .elements_list {
+    display: none;
+  }
+  .menu_bar {
+    display: block;
+    font-size: 2rem;
+    margin: 1.7rem 1rem;
+    margin-left: 0;
+    cursor: pointer;
+  }
 }
