@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import styles from "./Navbar.module.css";
 import Menubar from "../MenuBar/MenuBar";
+import Magnetic from "../../Lib/Magnetic";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -44,25 +45,37 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`${styles.navbar} ${darkMode ? styles.dark_navbar : ""}`}>
-        <div className={styles.logo}>IsrarDev</div>
-        <div className={styles.elements}>
-          <ul className={styles.elements_list}>
-            <li className={styles.elements_type}>Home</li>
-            <li className={styles.elements_type}>About</li>
-            <li className={styles.elements_type}>Experience</li>
-            <li className={styles.elements_type}>Projects</li>
-            <li className={styles.elements_type}>Resume</li>
-            <li className={styles.elements_contact}>Contact</li>
-          </ul>
-          <div className={styles.color_mode} onClick={toggleTheme}>
-            {darkMode ? <MdLightMode /> : <MdDarkMode />}
-          </div>
-          <div className={styles.menu_bar} onClick={toggleSidebar}>
-            <AiOutlineMenu />
+      <nav className={`${styles.navbar} ${darkMode ? styles.dark_navbar : ""}`}>
+        <div className={styles.internal}>
+          <Magnetic className={styles.logo}>
+            <div>Ass-rarDev</div>
+          </Magnetic>
+          <div className={styles.elements}>
+            <ul className={styles.elements_list}>
+              {[
+                "Home",
+                "About",
+                "Experience",
+                "Projects",
+                "Resume",
+                "Contact",
+              ].map((item, index) => (
+                <Magnetic key={index} className={styles.elements_type}>
+                  <li>{item}</li>
+                </Magnetic>
+              ))}
+            </ul>
+            <Magnetic>
+              <div className={styles.color_mode} onClick={toggleTheme}>
+                {darkMode ? <MdLightMode /> : <MdDarkMode />}
+              </div>
+            </Magnetic>
+            <div className={styles.menu_bar} onClick={toggleSidebar}>
+              <AiOutlineMenu />
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
       <Menubar
         open={isSidebarOpen}
         toggleSidebar={toggleSidebar}

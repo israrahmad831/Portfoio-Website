@@ -1,0 +1,111 @@
+.mainBox {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.leftSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introBox {
+  margin: 1rem;
+  max-width: 600px;
+}
+
+.introBox h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #af30e8;
+}
+
+.introBox p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.typing-text {
+  color: #af30e8;
+  font-weight: bold;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.socialLinks a {
+  font-size: 3rem;
+  color: #af30e8;
+}
+
+.socialLinks a:hover {
+  color: #8a1bc4;
+}
+
+.rightSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Israr {
+  width: 350px;
+  height: 370px;
+  border-radius: 50%;
+  border: 2px solid #af30e8;
+  box-shadow: 0 0 10px 5px #af30e8;
+}
+
+@media (max-width: 800px) {
+  .mainBox {
+    flex-direction: column-reverse;
+  }
+
+  .leftSide,
+  .rightSide {
+    width: 100%;
+    height: 100%;
+  }
+  .introBox {
+    margin-bottom: 0;
+  }
+  .introBox h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .introBox p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .socialLinks {
+    margin-bottom: 1rem;
+  }
+  .socialLinks a {
+    font-size: 1.8rem;
+  }
+  .Israr {
+    width: 280px;
+    height: 300px;
+  }
+}

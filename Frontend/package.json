@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 192.168.1.6 --port 5173",
+    "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -12,10 +12,13 @@
   "dependencies": {
     "@fontsource/outfit": "^5.2.5",
     "@tailwindcss/vite": "^4.0.9",
+    "framer-motion": "^12.4.10",
+    "lodash.throttle": "^4.1.1",
     "motion": "^12.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.3.0",
     "tailwindcss": "^4.0.9",
     "typed.js": "^2.1.0"
