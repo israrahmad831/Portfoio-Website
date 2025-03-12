@@ -1,3 +1,9 @@
+import { TbBrandMysql } from "react-icons/tb";
+import { TbBrandJavascript } from "react-icons/tb";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { DiNodejsSmall } from "react-icons/di";
+import { FaReact } from "react-icons/fa";
 import { RiGithubLine } from "react-icons/ri";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
@@ -14,7 +20,7 @@ const Home = () => {
     const typed = new Typed(typedref.current, {
       strings: [
         "Full Stack Developer",
-        "Moble App Developer",
+        "App Developer",
         "Problem Solver",
       ],
       typedSpeed: 0,
@@ -31,7 +37,7 @@ const Home = () => {
       <div className={styles.mainBox}>
         <div className={styles.leftSide}>
           <div className={styles.introBox}>
-            <h1>Welcome to My portfolio</h1>
+            <div className={styles.welcome}>Welcome to My portfolio</div>
             <h1 className={styles}>
               I am <span ref={typedref} />
             </h1>
@@ -74,6 +80,49 @@ const Home = () => {
         <div className={styles.rightSide}>
           <div className={styles.imageBox}>
             <img src={israr} className={styles.Israr} alt="Israr Ahmad" />
+          </div>
+        </div>
+      </div>
+      <div className={styles.TechUsed}>
+        <div className={styles.header}>
+          <h1>Technologies I Work With</h1>
+        </div>
+        <div className={styles.techs}>
+          <div className={styles.technology}>
+            <Magnetic>
+              <FaReact className={styles.icons} />
+            </Magnetic>
+            React.js
+          </div>
+          <div className={styles.technology}>
+            <Magnetic>
+              <DiNodejsSmall className={styles.icons} />
+            </Magnetic>
+            Node.js
+          </div>
+          <div className={styles.technology}>
+            <Magnetic>
+              <SiExpress className={styles.icons} />
+            </Magnetic>
+            Express.JS
+          </div>
+          <div className={styles.technology}>
+            <Magnetic>
+              <SiMongodb className={styles.icons} />
+            </Magnetic>
+            MongoDB
+          </div>
+          <div className={styles.technology}>
+            <Magnetic>
+              <TbBrandJavascript className={styles.icons} />
+            </Magnetic>
+            JavaScript
+          </div>
+          <div className={styles.technology}>
+            <Magnetic>
+              <TbBrandMysql className={styles.icons} />
+            </Magnetic>
+            MySQL
           </div>
         </div>
       </div>

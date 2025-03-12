@@ -1,12 +1,15 @@
+/* Navbar Styling */
 .navbar {
-  background-color: rgb(246, 250, 250);
+  background-color: #f4f6fa;
   display: flex;
   justify-content: center;
   width: 100%;
   z-index: 100;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
+  transition: background 0.3s ease-in-out;
 }
+
 .internal {
   max-width: 1400px;
   display: flex;
@@ -14,17 +17,20 @@
   justify-content: space-between;
   width: 100%;
 }
+
 .logo {
   font-size: 1.5rem;
   margin: 1.5rem 1rem;
   font-weight: bold;
-  background: linear-gradient(45deg, blue, #af30e8);
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .elements {
   display: flex;
 }
+
 .elements_list {
   list-style-type: none;
   display: flex;
@@ -32,81 +38,55 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .elements_type {
   margin: 1.7rem 1rem;
-  color: black;
   font-size: 1.2rem;
   text-decoration: none;
-  width: 100%;
-}
-
-.elements_type {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  font-weight: 300;
   cursor: pointer;
+  color: #2d2e32;
+  transition: color 0.3s ease-in-out;
 }
 
-/* .elements_type::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(45deg, blue, #af30e8);
-  transition: width 0.3s ease-in-out;
-} */
 .elements_type:hover {
-  background: linear-gradient(45deg, blue, #af30e8);
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
-/* .elements_type:hover::after {
-  width: 100%;
-} */
 
+/* Contact Button */
 .elements_contact {
   margin: 1.7rem 1rem;
   margin-right: 0;
   font-size: 1.2rem;
   text-decoration: none;
-  width: 100%;
-  color: white;
-  background: linear-gradient(45deg, blue, #af30e8);
-  padding: 0.2rem 1rem;
-  cursor: pointer;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  padding: 0.3rem 1.2rem;
   border-radius: 30px;
+  color: white;
+  cursor: pointer;
 }
+
 .elements_contact:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
 
+/* Theme Toggle */
 .color_mode {
   font-size: 2rem;
   margin: 1.7rem 1rem;
   cursor: pointer;
+  color: #6a11cb;
+  transition: transform 0.3s ease-in-out;
 }
+
 .color_mode:hover {
   transform: scale(1.3);
-  transition: transform 0.5s;
 }
 
-body {
-  background-color: rgb(246, 250, 250);
-  color: black;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.navbar {
-  background-color: rgb(246, 250, 250);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Dark Mode Styling */
 .dark {
   background-color: #121212;
   color: white;
@@ -121,17 +101,25 @@ body {
   color: white;
 }
 
+.dark .elements_type:hover {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .dark .elements_contact {
-  background: linear-gradient(45deg, #af30e8, blue);
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
 }
 
 .dark .color_mode {
   color: white;
 }
+
+/* Mobile Responsive */
 .menu_bar {
   display: none;
 }
+
 @media (max-width: 800px) {
   .elements_list {
     display: none;
@@ -140,7 +128,6 @@ body {
     display: block;
     font-size: 2rem;
     margin: 1.7rem 1rem;
-    margin-left: 0;
     cursor: pointer;
   }
 }

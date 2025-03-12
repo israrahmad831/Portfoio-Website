@@ -4,6 +4,7 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 import styles from "./Navbar.module.css";
 import Menubar from "../MenuBar/MenuBar";
 import Magnetic from "../../Lib/Magnetic";
+import Home from "../Home/Home";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
       <nav className={`${styles.navbar} ${darkMode ? styles.dark_navbar : ""}`}>
         <div className={styles.internal}>
           <Magnetic className={styles.logo}>
-            <div>Ass-rarDev</div>
+            <div>IsrarDev</div>
           </Magnetic>
           <div className={styles.elements}>
             <ul className={styles.elements_list}>
