@@ -15,53 +15,6 @@ const Experience = () => {
       <div>Experience</div>
       <div>Experience</div>
       <div>Experience</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
-      <div>Sex</div>
     </>
   );
 };
