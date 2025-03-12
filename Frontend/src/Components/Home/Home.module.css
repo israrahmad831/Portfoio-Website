@@ -1,4 +1,3 @@
-/* Main Container */
 .mainBox {
   display: flex;
   align-items: center;
@@ -18,6 +17,9 @@
   align-items: flex-start;
   width: 50%;
   height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
 }
 
 .introBox {
@@ -32,9 +34,7 @@
 
 .introBox span {
   font-weight: 900;
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #2575fc;
 }
 
 .introBox p {
@@ -53,11 +53,11 @@
 
 .socialLinks a {
   font-size: 2rem;
-  color: #6a11cb;
+  color: #3b82f6;
   text-decoration: none;
   padding: 12px;
   border-radius: 50%;
-  background: rgba(106, 17, 203, 0.15);
+  background: rgba(195, 164, 228, 0.15);
   transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@
 }
 
 .socialLinks a:hover {
-  background: #6a11cb;
+  background: #3b82f6;
   color: white;
   transform: scale(1.1);
 }
@@ -128,9 +128,6 @@
 .header h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
 }
 
@@ -153,7 +150,7 @@
   font-weight: bold;
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  background: rgba(106, 17, 203, 0.15);
+  background: rgba(195, 164, 228, 0.15);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in-out;
 }
@@ -162,9 +159,10 @@
   transform: scale(1.05);
 }
 
-.icons{
+.icons {
   font-size: 2.5rem;
-  color: #6a11cb;
+
+  color: #3b82f6;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 1024px) {
@@ -192,8 +190,8 @@
     flex-direction: column-reverse;
     padding-top: 7rem;
     gap: 0;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .rightSide {
     width: 100%;
@@ -213,9 +211,11 @@
   .introBox {
     line-height: normal;
   }
-
+  .introBox h1 {
+    font-size: 1.5rem;
+  }
   .Israr {
-    width: 250px;
+    width: 350px;
     height: 100%;
   }
 
@@ -233,7 +233,7 @@
     padding: 0 1.5rem;
   }
   .welcome {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .technology {
     padding: 1rem 1.5rem;

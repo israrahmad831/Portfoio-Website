@@ -18,11 +18,7 @@ const Home = () => {
   const typedref = React.useRef(null);
   useEffect(() => {
     const typed = new Typed(typedref.current, {
-      strings: [
-        "Full Stack Developer",
-        "App Developer",
-        "Problem Solver",
-      ],
+      strings: ["Full Stack Developer", "App Developer", "Problem Solver"],
       typedSpeed: 0,
       backSpeed: 50,
       loop: true,

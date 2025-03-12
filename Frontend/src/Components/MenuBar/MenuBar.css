@@ -1,4 +1,3 @@
-/* Default Sidebar Styles */
 .sidebar {
   position: fixed;
   top: 5.4rem;
@@ -18,7 +17,6 @@
   transform: translateY(0);
 }
 
-/* Dark Mode Sidebar */
 .sidebar.dark-mode {
   background-color: #121212;
 }
@@ -32,9 +30,7 @@
   color: #ffffff;
 }
 
-/* Sidebar Links */
 .sidebar-links {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -57,11 +53,26 @@
   padding-left: 20px;
 }
 
-/* Dark Mode for Links */
 .sidebar.dark-mode .nav-links {
   color: white;
 }
 
 .sidebar.dark-mode .nav-links:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+.sociallinks {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.sociallinks a {
+  font-size: 2rem;
+  color: #3b82f6;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(195, 164, 228, 0.15);
+  transition: all 0.3s ease-in-out;
 }

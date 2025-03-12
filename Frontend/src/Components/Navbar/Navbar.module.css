@@ -1,4 +1,3 @@
-/* Navbar Styling */
 .navbar {
   background-color: #f4f6fa;
   display: flex;
@@ -22,9 +21,8 @@
   font-size: 1.5rem;
   margin: 1.5rem 1rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #3b82f6;
+  cursor: pointer;
 }
 
 .elements {
@@ -40,6 +38,8 @@
 }
 
 .elements_type {
+  color: #0e6fdf;
+
   margin: 1.7rem 1rem;
   font-size: 1.2rem;
   text-decoration: none;
@@ -48,37 +48,26 @@
   transition: color 0.3s ease-in-out;
 }
 
-.elements_type:hover {
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+.elements_type::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6c9ff0, #0e6fdf);
+  transition: width 0.3s ease-in-out;
 }
 
-/* Contact Button */
-.elements_contact {
-  margin: 1.7rem 1rem;
-  margin-right: 0;
-  font-size: 1.2rem;
-  text-decoration: none;
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  padding: 0.3rem 1.2rem;
-  border-radius: 30px;
-  color: white;
-  cursor: pointer;
+.elements_type:hover::after {
+  width: 100%;
 }
 
-.elements_contact:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s;
-}
-
-/* Theme Toggle */
 .color_mode {
   font-size: 2rem;
   margin: 1.7rem 1rem;
   cursor: pointer;
-  color: #6a11cb;
+  color: #3b82f6;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -86,7 +75,6 @@
   transform: scale(1.3);
 }
 
-/* Dark Mode Styling */
 .dark {
   background-color: #121212;
   color: white;
@@ -101,25 +89,17 @@
   color: white;
 }
 
-.dark .elements_type:hover {
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.dark .elements_contact {
-  background: linear-gradient(45deg, #2575fc, #6a11cb);
-}
-
 .dark .color_mode {
   color: white;
 }
 
-/* Mobile Responsive */
 .menu_bar {
   display: none;
 }
-
+.elements_type:hover {
+  color: #0e6fdf;
+  font-weight: bold;
+}
 @media (max-width: 800px) {
   .elements_list {
     display: none;
