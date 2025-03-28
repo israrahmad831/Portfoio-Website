@@ -1,0 +1,156 @@
+.projectsContainer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.slider {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.projectCard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  margin: auto;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.image {
+  width: fit-content;
+  object-fit: cover;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  padding: 1rem;
+}
+
+.projectCard:hover .overlay {
+  opacity: 1;
+}
+
+.projectTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.projectDescription {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.tagContainer {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.projectInfo {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.viewButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 12px;
+  width: fit-content;
+  border-radius: 50%;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.viewButton:hover {
+  background: #2563eb;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    padding: 0;
+  }
+
+  .projectCard {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    max-width: 100%;
+  }
+
+  .overlay {
+    padding: 0.8rem;
+  }
+
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+
+  .viewButton {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}

@@ -4,6 +4,7 @@ import Home from "./Components/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./Components/About/About";
 import Experience from "./Components/Experience/Experience";
+import Projects from "./Components/Projects/Projects";
 const App = () => {
   return (
     <>
@@ -11,8 +12,7 @@ const App = () => {
       <Home />
       <About />
       <Experience />
-
-      
+      <Projects />
     </>
   );
 };
