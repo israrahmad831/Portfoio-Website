@@ -4,6 +4,7 @@ import { CgWebsite } from "react-icons/cg";
 import { FiServer, FiDatabase, FiCloud } from "react-icons/fi";
 import { motion } from "framer-motion";
 import styles from "./About.module.css";
+import Magnetic from "../../Lib/Magnetic";
 
 const About = () => {
   const experiences = [
@@ -71,7 +72,9 @@ const About = () => {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <CgWebsite className={styles.iconLarge} />
+            <Magnetic>
+              <CgWebsite className={styles.iconLarge} />
+            </Magnetic>
             <div>
               <h2 className={styles.cardTitle}>Full-Stack Development</h2>
               <p className={styles.cardText}>
@@ -80,7 +83,9 @@ const About = () => {
             </div>
           </div>
           <div className={styles.card}>
-            <RxGear className={styles.iconLarge} />
+            <Magnetic>
+              <RxGear className={styles.iconLarge} />
+            </Magnetic>
             <div>
               <h2 className={styles.cardTitle}>Backend Architecture</h2>
               <p className={styles.cardText}>
@@ -98,10 +103,10 @@ const About = () => {
               <div key={index} className={styles.timelineItem}>
                 <motion.div
                   className={styles.timelineDot}
-                  initial={{ y: 70, opacity: 1 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  viewport={{ once: true }}
+                  initial={{ y: 90 }}
+                  whileInView={{ y: -10 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  viewport={{ once: false, amount: 0.5 }}
                 ></motion.div>
                 <h3 className={styles.timelineTitle}>{exp.title}</h3>
                 <p className={styles.timelineDuration}>{exp.duration}</p>
@@ -116,7 +121,9 @@ const About = () => {
           <div className={styles.focusArea}>
             {focusAreas.map((focus, index) => (
               <div key={index} className={styles.focusItem}>
-                <div className={styles.focusIcon}>{focus.icon}</div>
+                <Magnetic>
+                  <div className={styles.focusIcon}>{focus.icon}</div>
+                </Magnetic>
                 <div>
                   <h3 className={styles.focusTitle}>{focus.title}</h3>
                   <p className={styles.focusText}>{focus.description}</p>
