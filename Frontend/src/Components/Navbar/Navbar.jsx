@@ -49,7 +49,7 @@ const Navbar = () => {
       <nav className={`${styles.navbar} ${darkMode ? styles.dark_navbar : ""}`}>
         <div className={styles.internal}>
           <Magnetic className={styles.logo}>
-            <div>IsrScripter</div>
+            <div>IsrarJS</div>
           </Magnetic>
           <div className={styles.elements}>
             <ul className={styles.elements_list}>
