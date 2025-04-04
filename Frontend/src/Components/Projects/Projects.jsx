@@ -11,7 +11,7 @@ import learningWebsiteImage from "../../assets/learning_website_cover.png";
 import quizImage from "../../assets/quiz_app.jpeg";
 import snakeImage from "../../assets/snake_game.jpeg";
 import pongImage from "../../assets/pong_game.jpeg";
-
+import Magnetic from "../../Lib/Magnetic";
 const s = styles;
 
 const Projects = () => {
@@ -97,13 +97,14 @@ const Projects = () => {
       <h2 className={s.sectionTitle}>My Projects</h2>
       <div className={s.categoryButtons}>
         {Object.keys(projectData).map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setCategory(cat)}
-            className={category === cat ? s.activeButton : ""}
-          >
-            {cat}
-          </button>
+          <Magnetic key={cat}>
+            <button
+              onClick={() => setCategory(cat)}
+              className={category === cat ? s.activeButton : ""}
+            >
+              {cat}
+            </button>
+          </Magnetic>
         ))}
       </div>
 
@@ -139,19 +140,21 @@ const Projects = () => {
               <div className={s.projectInfo}>
                 <div className={s.tagContainer}>
                   {project.tags.map((tag, i) => (
-                    <span key={i} className={s.tag}>
-                      {tag}
-                    </span>
+                    <Magnetic key={i}>
+                      <span className={s.tag}>{tag}</span>
+                    </Magnetic>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={s.viewButton}
-                >
-                  View
-                </a>
+                <Magnetic>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={s.viewButton}
+                  >
+                    View
+                  </a>
+                </Magnetic>
               </div>
             </div>
           </SwiperSlide>
