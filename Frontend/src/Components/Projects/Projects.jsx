@@ -109,7 +109,7 @@ const Projects = () => {
       </div>
 
       <Swiper
-        slidesPerView={projects.length < 3 ? projects.length : 3}
+        slidesPerView={1}
         spaceBetween={20}
         loop={true}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -117,48 +117,60 @@ const Projects = () => {
         grabCursor={true}
         modules={[Pagination, Autoplay]}
         breakpoints={{
-          1024: { slidesPerView: projects.length < 3 ? projects.length : 3 },
-          768: { slidesPerView: projects.length < 2 ? projects.length : 2 },
-          480: { slidesPerView: 1 },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          480: {
+            slidesPerView: 1,
+          },
         }}
+        centeredSlides={true}
+        centeredSlidesBounds={true}
         className={s.slider}
       >
-        {projects.map((project, index) => (
-          <SwiperSlide key={index} className={s.slide}>
-            <div className={s.projectCard}>
-              <div className={s.imageContainer}>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={s.image}
-                />
-                <div className={s.overlay}>
-                  <h3 className={s.projectTitle}>{project.title}</h3>
-                  <p className={s.projectDescription}>{project.description}</p>
+        <div className={s.projectsBox}>
+          {projects.map((project, index) => (
+            <SwiperSlide key={index} className={s.slide}>
+              <div className={s.projectCard}>
+                <div className={s.imageContainer}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className={s.image}
+                  />
+                  <div className={s.overlay}>
+                    <h3 className={s.projectTitle}>{project.title}</h3>
+                    <p className={s.projectDescription}>
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+                <div className={s.projectInfo}>
+                  <div className={s.tagContainer}>
+                    {project.tags.map((tag, i) => (
+                      <Magnetic key={i}>
+                        <span className={s.tag}>{tag}</span>
+                      </Magnetic>
+                    ))}
+                  </div>
+                  <Magnetic>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={s.viewButton}
+                    >
+                      View
+                    </a>
+                  </Magnetic>
                 </div>
               </div>
-              <div className={s.projectInfo}>
-                <div className={s.tagContainer}>
-                  {project.tags.map((tag, i) => (
-                    <Magnetic key={i}>
-                      <span className={s.tag}>{tag}</span>
-                    </Magnetic>
-                  ))}
-                </div>
-                <Magnetic>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={s.viewButton}
-                  >
-                    View
-                  </a>
-                </Magnetic>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))}
+        </div>
       </Swiper>
     </div>
   );
