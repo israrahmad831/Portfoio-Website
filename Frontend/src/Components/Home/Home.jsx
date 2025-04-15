@@ -14,9 +14,16 @@ import Typed from "typed.js";
 import israr from "../../assets/me.png";
 import Magnetic from "../../Lib/Magnetic";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Home = () => {
   const typedref = React.useRef(null);
   useEffect(() => {
+    toast.info("🚧 Website is still under construction! 🚧", {
+      position: "top-right",
+      autoClose: false, // Toast will be visible for 3 seconds
+    });
     const typed = new Typed(typedref.current, {
       strings: ["Full Stack Developer", "App Developer", "Problem Solver"],
       typedSpeed: 0,
@@ -122,6 +129,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ToastContainer style={{ marginTop: "5rem" }} />
     </>
   );
 };
