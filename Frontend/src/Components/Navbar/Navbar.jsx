@@ -4,9 +4,8 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 import styles from "./Navbar.module.css";
 import Menubar from "../MenuBar/MenuBar";
 import Magnetic from "../../Lib/Magnetic";
-import Home from "../Home/Home";
 
-const Navbar = () => {
+const Navbar = ({ sectionRefs }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
@@ -44,13 +43,23 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const scrollToSection = (section) => {
+    const element = sectionRefs[section]?.current;
+    if (element) {
+      const offset = -80;
+      const top = element.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <nav className={`${styles.navbar} ${darkMode ? styles.dark_navbar : ""}`}>
         <div className={styles.internal}>
           <Magnetic className={styles.logo}>
-            <div>IsrarJS</div>
+            <div onClick={() => scrollToSection("Home")}>IsrarJS</div>
           </Magnetic>
+
           <div className={styles.elements}>
             <ul className={styles.elements_list}>
               {[
@@ -62,25 +71,29 @@ const Navbar = () => {
                 "Contact",
               ].map((item, index) => (
                 <Magnetic key={index} className={styles.elements_type}>
-                  <li>{item}</li>
+                  <li onClick={() => scrollToSection(item)}>{item}</li>
                 </Magnetic>
               ))}
             </ul>
+
             <Magnetic>
               <div className={styles.color_mode} onClick={toggleTheme}>
                 {darkMode ? <MdLightMode /> : <MdDarkMode />}
               </div>
             </Magnetic>
+
             <div className={styles.menu_bar} onClick={toggleSidebar}>
               <AiOutlineMenu />
             </div>
           </div>
         </div>
       </nav>
+
       <Menubar
         open={isSidebarOpen}
         toggleSidebar={toggleSidebar}
         darkMode={darkMode}
+        sectionRefs={sectionRefs}
       />
     </>
   );
