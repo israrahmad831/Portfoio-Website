@@ -9,6 +9,8 @@ import Resume from "./Components/Resume/Resume";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoClose } from "react-icons/io5"; // icon for close button
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   const sectionRefs = {
@@ -128,6 +130,11 @@ const App = () => {
       <div ref={sectionRefs.Resume}>
         <Resume />
       </div>
+      <div ref={sectionRefs.Contact}>
+        <Contact />
+      </div>
+      <Footer sectionRefs={sectionRefs} />
+
       <ToastContainer style={{ marginTop: "4.5rem" }} />
     </>
   );
