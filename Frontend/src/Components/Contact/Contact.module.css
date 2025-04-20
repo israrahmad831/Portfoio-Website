@@ -1,8 +1,17 @@
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+}
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
+  width: 100%;
 }
 .contactBox {
   width: 95%;

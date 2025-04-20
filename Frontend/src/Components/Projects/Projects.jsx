@@ -5,12 +5,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
-import sillicomImage from "../../assets/sillicom_technologies_cover.jpeg";
+import sillicomImage from "../../assets/sillicomtech.png";
 import blackLimoImage from "../../assets/black_limo_cover.png";
 import learningWebsiteImage from "../../assets/learning_website_cover.png";
-import quizImage from "../../assets/quiz_app.jpeg";
-import snakeImage from "../../assets/snake_game.jpeg";
-import pongImage from "../../assets/pong_game.jpeg";
+import Facilitaion from "../../assets/Facilitation.png";
+import quizImage from "../../assets/Quiz.png";
+import snakeImage from "../../assets/snake.png";
+import HeerFlyingClub from "../../assets/HeerFlyingClub.png";
+import ChaiKhana from "../../assets/ChaiKhana.png";
+import Pong from "../../assets/pong.png";
 import Magnetic from "../../Lib/Magnetic";
 const s = styles;
 
@@ -44,22 +47,22 @@ const Projects = () => {
         title: "Student Facilitation Portal",
         description:
           "A portal for students to submit queries and admin review them.",
-        image: learningWebsiteImage,
+        image: Facilitaion,
         link: "https://github.com/israrahmad831/Student-Facilitation-Portal",
-        tags: ["html", "Css", "JavaScript", "MySQL"],
+        tags: ["html Css", "JavaScript", "MySQL"],
       },
       {
         title: "Chai Khaana",
         description: "Simple Frontend Design of a restaurant website.",
-        image: learningWebsiteImage,
+        image: ChaiKhana,
         link: "https://github.com/israrahmad831/Chai-Khaana",
         tags: ["html", "Css"],
       },
       {
-        title: "Heer Pigeon Club",
+        title: "Heer Flying Club",
         description: "A Full Stack website for a Pigeon Racing Club.",
-        image: learningWebsiteImage,
-        link: "https://github.com/SohailShafiq1/Heer-Piegon-Full-stack",
+        image: HeerFlyingClub,
+        link: "https://heerflyingclub.com",
         tags: ["React.js", "Express", "MongoDB"],
       },
     ],
@@ -83,7 +86,7 @@ const Projects = () => {
       {
         title: "Pong Game",
         description: "A simple Pong game using C++.",
-        image: pongImage,
+        image: Pong,
         link: "https://github.com/israrahmad831/Pong-Game",
         tags: ["C++", "Raylib"],
       },
@@ -93,86 +96,89 @@ const Projects = () => {
   const projects = projectData[category] || [];
 
   return (
-    <div className={s.projectsContainer}>
-      <h2 className={s.sectionTitle}>My Projects</h2>
-      <div className={s.categoryButtons}>
-        {Object.keys(projectData).map((cat) => (
-          <Magnetic key={cat}>
-            <button
-              onClick={() => setCategory(cat)}
-              className={category === cat ? s.activeButton : ""}
-            >
-              {cat}
-            </button>
-          </Magnetic>
-        ))}
-      </div>
-
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={20}
-        loop={true}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        grabCursor={true}
-        modules={[Pagination, Autoplay]}
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          480: {
-            slidesPerView: 1,
-          },
-        }}
-        centeredSlides={true}
-        centeredSlidesBounds={true}
-        className={s.slider}
-      >
-        <div className={s.projectsBox}>
-          {projects.map((project, index) => (
-            <SwiperSlide key={index} className={s.slide}>
-              <div className={s.projectCard}>
-                <div className={s.imageContainer}>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={s.image}
-                  />
-                  <div className={s.overlay}>
-                    <h3 className={s.projectTitle}>{project.title}</h3>
-                    <p className={s.projectDescription}>
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-                <div className={s.projectInfo}>
-                  <div className={s.tagContainer}>
-                    {project.tags.map((tag, i) => (
-                      <Magnetic key={i}>
-                        <span className={s.tag}>{tag}</span>
+    <>
+      <div className={s.mainBox}>
+        <div className={s.projectsContainer}>
+          <h2 className={s.sectionTitle}>My Projects</h2>
+          <div className={s.categoryButtons}>
+            {Object.keys(projectData).map((cat) => (
+              <Magnetic key={cat}>
+                <button
+                  onClick={() => setCategory(cat)}
+                  className={category === cat ? s.activeButton : ""}
+                >
+                  {cat}
+                </button>
+              </Magnetic>
+            ))}
+          </div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            loop={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            grabCursor={true}
+            modules={[Pagination, Autoplay]}
+            breakpoints={{
+              1024: {
+                slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              480: {
+                slidesPerView: 1,
+              },
+            }}
+            centeredSlides={true}
+            centeredSlidesBounds={true}
+            className={s.slider}
+          >
+            <div className={s.projectsBox}>
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className={s.slide}>
+                  <div className={s.projectCard}>
+                    <div className={s.imageContainer}>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className={s.image}
+                      />
+                      <div className={s.overlay}>
+                        <h3 className={s.projectTitle}>{project.title}</h3>
+                        <p className={s.projectDescription}>
+                          {project.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className={s.projectInfo}>
+                      <div className={s.tagContainer}>
+                        {project.tags.map((tag, i) => (
+                          <Magnetic key={i}>
+                            <span className={s.tag}>{tag}</span>
+                          </Magnetic>
+                        ))}
+                      </div>
+                      <Magnetic>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={s.viewButton}
+                        >
+                          View
+                        </a>
                       </Magnetic>
-                    ))}
+                    </div>
                   </div>
-                  <Magnetic>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={s.viewButton}
-                    >
-                      View
-                    </a>
-                  </Magnetic>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
+                </SwiperSlide>
+              ))}
+            </div>
+          </Swiper>
         </div>
-      </Swiper>
-    </div>
+      </div>
+    </>
   );
 };
 

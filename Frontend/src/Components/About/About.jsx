@@ -47,93 +47,98 @@ const About = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftSide}>
-        <div className={styles.section}>
-          <h1 className={styles.title}>About Me</h1>
-          <p className={styles.text}>
-            I’m <span className={styles.bold}>Israr Ahmad</span>, a passionate{" "}
-            <span className={styles.bold}>full-stack developer</span> with
-            expertise in React, JavaScript, and Express.js. I specialize in
-            building scalable, high-performance web applications, focusing on
-            clean, efficient, and maintainable code. My strength lies in
-            developing robust backend architectures and integrating them
-            seamlessly with dynamic frontends.
-            <br />
-            <br />I thrive on solving complex problems and optimizing systems
-            for better efficiency. My approach to development is rooted in
-            continuous learning and innovation, ensuring that every project
-            meets the highest standards. Whether working independently or as
-            part of a team, I am committed to delivering reliable and impactful
-            digital solutions. If you're looking for a dedicated developer to
-            collaborate with, let's connect!
-          </p>
-        </div>
-
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <Magnetic>
-              <CgWebsite className={styles.iconLarge} />
-            </Magnetic>
-            <div>
-              <h2 className={styles.cardTitle}>Full-Stack Development</h2>
-              <p className={styles.cardText}>
-                Building scalable and efficient web applications.
+    <>
+      <div className={styles.mainBox}>
+        <div className={styles.container}>
+          <div className={styles.leftSide}>
+            <div className={styles.section}>
+              <h1 className={styles.title}>About Me</h1>
+              <p className={styles.text}>
+                I’m <span className={styles.bold}>Israr Ahmad</span>, a
+                passionate{" "}
+                <span className={styles.bold}>full-stack developer</span> with
+                expertise in React, JavaScript, and Express.js. I specialize in
+                building scalable, high-performance web applications, focusing
+                on clean, efficient, and maintainable code. My strength lies in
+                developing robust backend architectures and integrating them
+                seamlessly with dynamic frontends.
+                <br />
+                <br />I thrive on solving complex problems and optimizing
+                systems for better efficiency. My approach to development is
+                rooted in continuous learning and innovation, ensuring that
+                every project meets the highest standards. Whether working
+                independently or as part of a team, I am committed to delivering
+                reliable and impactful digital solutions. If you're looking for
+                a dedicated developer to collaborate with, let's connect!
               </p>
             </div>
-          </div>
-          <div className={styles.card}>
-            <Magnetic>
-              <RxGear className={styles.iconLarge} />
-            </Magnetic>
-            <div>
-              <h2 className={styles.cardTitle}>Backend Architecture</h2>
-              <p className={styles.cardText}>
-                Creating robust and optimized server-side solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.rightSide}>
-        <div className={styles.section}>
-          <h2 className={styles.title}>Professional Journey</h2>
-          <div className={styles.timeline}>
-            {experiences.map((exp, index) => (
-              <div key={index} className={styles.timelineItem}>
-                <motion.div
-                  className={styles.timelineDot}
-                  initial={{ y: 90 }}
-                  whileInView={{ y: -10 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  viewport={{ once: false, amount: 0.5 }}
-                ></motion.div>
-                <h3 className={styles.timelineTitle}>{exp.title}</h3>
-                <p className={styles.timelineDuration}>{exp.duration}</p>
-                <p className={styles.timelineText}>{exp.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div className={styles.section}>
-          <h2 className={styles.title}>Current Focus</h2>
-          <div className={styles.focusArea}>
-            {focusAreas.map((focus, index) => (
-              <div key={index} className={styles.focusItem}>
+            <div className={styles.grid}>
+              <div className={styles.card}>
                 <Magnetic>
-                  <div className={styles.focusIcon}>{focus.icon}</div>
+                  <CgWebsite className={styles.iconLarge} />
                 </Magnetic>
                 <div>
-                  <h3 className={styles.focusTitle}>{focus.title}</h3>
-                  <p className={styles.focusText}>{focus.description}</p>
+                  <h2 className={styles.cardTitle}>Full-Stack Development</h2>
+                  <p className={styles.cardText}>
+                    Building scalable and efficient web applications.
+                  </p>
                 </div>
               </div>
-            ))}
+              <div className={styles.card}>
+                <Magnetic>
+                  <RxGear className={styles.iconLarge} />
+                </Magnetic>
+                <div>
+                  <h2 className={styles.cardTitle}>Backend Architecture</h2>
+                  <p className={styles.cardText}>
+                    Creating robust and optimized server-side solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.rightSide}>
+            <div className={styles.section}>
+              <h2 className={styles.title}>Professional Journey</h2>
+              <div className={styles.timeline}>
+                {experiences.map((exp, index) => (
+                  <div key={index} className={styles.timelineItem}>
+                    <motion.div
+                      className={styles.timelineDot}
+                      initial={{ y: 90 }}
+                      whileInView={{ y: -10 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                      viewport={{ once: false, amount: 0.5 }}
+                    ></motion.div>
+                    <h3 className={styles.timelineTitle}>{exp.title}</h3>
+                    <p className={styles.timelineDuration}>{exp.duration}</p>
+                    <p className={styles.timelineText}>{exp.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.section}>
+              <h2 className={styles.title}>Current Focus</h2>
+              <div className={styles.focusArea}>
+                {focusAreas.map((focus, index) => (
+                  <div key={index} className={styles.focusItem}>
+                    <Magnetic>
+                      <div className={styles.focusIcon}>{focus.icon}</div>
+                    </Magnetic>
+                    <div>
+                      <h3 className={styles.focusTitle}>{focus.title}</h3>
+                      <p className={styles.focusText}>{focus.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

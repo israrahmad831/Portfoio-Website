@@ -41,88 +41,90 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className={styles.expContainer}>
-      {/* Frontend Section */}
-      <div className={styles.expBox}>
-        <div className={styles.expLeft}>
-          <div className={styles.iconBox}>
-            <Magnetic>
-              <MdWeb className={styles.icon} />
-            </Magnetic>
-          </div>
-          <h2 className={styles.sectionTitle}>Frontend Development</h2>
-          <div>
-            {fSkills.map((skill, index) => (
-              <div key={index} className={styles.skillBox}>
-                <div className={styles.skillHeader}>
-                  <span className={styles.skillName}>{skill.name}</span>
-                  <span className={styles.skillLevel}>{skill.level}</span>
-                </div>
-                <div
-                  className={styles.progressBar}
-                  ref={(el) => (progressRefs.current[index] = el)}
-                >
-                  <div
-                    className={styles.progressFill}
-                    style={{ width: visible ? skill.points : "0%" }}
-                  ></div>
-                </div>
+    <>
+      <div className={styles.mainBox}>
+        <div className={styles.expContainer}>
+          <div className={styles.expBox}>
+            <div className={styles.expLeft}>
+              <div className={styles.iconBox}>
+                <Magnetic>
+                  <MdWeb className={styles.icon} />
+                </Magnetic>
               </div>
-            ))}
-          </div>
-        </div>
+              <h2 className={styles.sectionTitle}>Frontend Development</h2>
+              <div>
+                {fSkills.map((skill, index) => (
+                  <div key={index} className={styles.skillBox}>
+                    <div className={styles.skillHeader}>
+                      <span className={styles.skillName}>{skill.name}</span>
+                      <span className={styles.skillLevel}>{skill.level}</span>
+                    </div>
+                    <div
+                      className={styles.progressBar}
+                      ref={(el) => (progressRefs.current[index] = el)}
+                    >
+                      <div
+                        className={styles.progressFill}
+                        style={{ width: visible ? skill.points : "0%" }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-        {/* Backend Section */}
-        <div className={styles.expRight}>
-          <div className={styles.iconBox}>
-            <Magnetic>
-              <FiServer className={styles.icon} />
-            </Magnetic>
-          </div>
-          <h2 className={styles.sectionTitle}>Backend Development</h2>
-          <div>
-            {bSkills.map((skill, index) => (
-              <div key={index} className={styles.skillBox}>
-                <div className={styles.skillHeader}>
-                  <span className={styles.skillName}>{skill.name}</span>
-                  <span className={styles.skillLevel}>{skill.level}</span>
-                </div>
-                <div
-                  className={styles.progressBar}
-                  ref={(el) =>
-                    (progressRefs.current[index + fSkills.length] = el)
-                  }
-                >
-                  <div
-                    className={styles.progressFill}
-                    style={{ width: visible ? skill.points : "0%" }}
-                  ></div>
-                </div>
+            <div className={styles.expRight}>
+              <div className={styles.iconBox}>
+                <Magnetic>
+                  <FiServer className={styles.icon} />
+                </Magnetic>
               </div>
-            ))}
+              <h2 className={styles.sectionTitle}>Backend Development</h2>
+              <div>
+                {bSkills.map((skill, index) => (
+                  <div key={index} className={styles.skillBox}>
+                    <div className={styles.skillHeader}>
+                      <span className={styles.skillName}>{skill.name}</span>
+                      <span className={styles.skillLevel}>{skill.level}</span>
+                    </div>
+                    <div
+                      className={styles.progressBar}
+                      ref={(el) =>
+                        (progressRefs.current[index + fSkills.length] = el)
+                      }
+                    >
+                      <div
+                        className={styles.progressFill}
+                        style={{ width: visible ? skill.points : "0%" }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.tools}>
+              <Magnetic>
+                <span>VS Code</span>
+              </Magnetic>
+              <Magnetic>
+                <span>Git</span>
+              </Magnetic>
+              <Magnetic>
+                <span>Postman</span>
+              </Magnetic>
+              <Magnetic>
+                <span>Netlify</span>
+              </Magnetic>
+              <Magnetic>
+                <span>Chrome Dev Tools</span>
+              </Magnetic>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <div className={styles.tools}>
-          <Magnetic>
-            <span>VS Code</span>
-          </Magnetic>
-          <Magnetic>
-            <span>Git</span>
-          </Magnetic>
-          <Magnetic>
-            <span>Postman</span>
-          </Magnetic>
-          <Magnetic>
-            <span>Netlify</span>
-          </Magnetic>
-          <Magnetic>
-            <span>Chrome Dev Tools</span>
-          </Magnetic>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

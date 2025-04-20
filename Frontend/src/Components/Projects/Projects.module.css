@@ -1,3 +1,9 @@
+.mainBox {
+  vertical-align: middle;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
 .projectsContainer {
   padding: 2rem;
   text-align: center;
@@ -39,7 +45,7 @@
 
 .slider {
   max-width: 100%;
-  margin: 0 auto; /* Ensure it is centered horizontally */
+  margin: 0 auto;
   padding: 0 1rem;
 }
 .slide {
@@ -71,14 +77,15 @@
 .imageContainer {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 170px;
   overflow: hidden;
+  object-fit: cover;
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .overlay {

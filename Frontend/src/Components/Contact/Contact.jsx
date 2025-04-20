@@ -84,86 +84,90 @@ const Contact = () => {
   };
 
   return (
-    <div className={s.container}>
-      <div className={s.contactBox}>
-        <h2 className={s.title}>Contact Me</h2>
-        <p className={s.subtitle}>
-          I'd love to hear from you. Fill out the form or reach out via the info
-          below.
-        </p>
+    <>
+      <div className={s.mainBox}>
+        <div className={s.container}>
+          <div className={s.contactBox}>
+            <h2 className={s.title}>Contact Me</h2>
+            <p className={s.subtitle}>
+              I'd love to hear from you. Fill out the form or reach out via the
+              info below.
+            </p>
 
-        <div className={s.content}>
-          <form className={s.form} onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              className={s.input}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className={s.input}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              className={s.textarea}
-            ></textarea>
-            <button type="submit" className={s.button}>
-              Send Message
-            </button>
-          </form>
+            <div className={s.content}>
+              <form className={s.form} onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={s.input}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={s.input}
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className={s.textarea}
+                ></textarea>
+                <button type="submit" className={s.button}>
+                  Send Message
+                </button>
+              </form>
 
-          <div className={s.infoContainer}>
-            <div className={s.info}>
-              <h3>Contact Information</h3>
-              <div className={s.socialLinks}>
-                <Magnetic>
-                  <a
-                    href="https://www.linkedin.com/in/israrahmad2004/"
-                    target="blank"
-                  >
-                    <AiOutlineLinkedin />
-                  </a>
-                </Magnetic>
-                <Magnetic>
-                  <a href="https://github.com/israrahmad831" target="blank">
-                    <RiGithubLine />
-                  </a>
-                </Magnetic>
-                <Magnetic>
-                  <a href="https://www.facebook.com/xDisrar" target="blank">
-                    <AiOutlineFacebook />
-                  </a>
-                </Magnetic>
-                <Magnetic>
-                  <a href="https://wa.me/923264114782" target="blank">
-                    <FaWhatsapp />
-                  </a>
-                </Magnetic>
+              <div className={s.infoContainer}>
+                <div className={s.info}>
+                  <h3>Contact Information</h3>
+                  <div className={s.socialLinks}>
+                    <Magnetic>
+                      <a
+                        href="https://www.linkedin.com/in/israrahmad2004/"
+                        target="blank"
+                      >
+                        <AiOutlineLinkedin />
+                      </a>
+                    </Magnetic>
+                    <Magnetic>
+                      <a href="https://github.com/israrahmad831" target="blank">
+                        <RiGithubLine />
+                      </a>
+                    </Magnetic>
+                    <Magnetic>
+                      <a href="https://www.facebook.com/xDisrar" target="blank">
+                        <AiOutlineFacebook />
+                      </a>
+                    </Magnetic>
+                    <Magnetic>
+                      <a href="https://wa.me/923264114782" target="blank">
+                        <FaWhatsapp />
+                      </a>
+                    </Magnetic>
+                  </div>
+                </div>
+
+                <div className={s.additionalContent}>
+                  <p>
+                    Feel free to drop me a message anytime! I'm always open to
+                    new opportunities, collaborations, or discussions.
+                  </p>
+                  <p>Looking forward to connecting with you!</p>
+                </div>
               </div>
-            </div>
-
-            <div className={s.additionalContent}>
-              <p>
-                Feel free to drop me a message anytime! I'm always open to new
-                opportunities, collaborations, or discussions.
-              </p>
-              <p>Looking forward to connecting with you!</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
