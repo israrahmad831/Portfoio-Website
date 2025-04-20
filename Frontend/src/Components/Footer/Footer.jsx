@@ -27,34 +27,42 @@ const Footer = ({ sectionRefs }) => {
                 magic.
               </p>
               <div className={s.socialLinks}>
-                <a
-                  href="https://www.linkedin.com/in/israrahmad2004/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiOutlineLinkedin />
-                </a>
-                <a
-                  href="https://github.com/israrahmad831"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <RiGithubLine />
-                </a>
-                <a
-                  href="https://www.facebook.com/xDisrar"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiOutlineFacebook />
-                </a>
-                <a
-                  href="https://wa.me/923264114782"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaWhatsapp />
-                </a>
+                <Magnetic>
+                  <a
+                    href="https://www.linkedin.com/in/israrahmad2004/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiOutlineLinkedin />
+                  </a>
+                </Magnetic>
+                <Magnetic>
+                  <a
+                    href="https://github.com/israrahmad831"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <RiGithubLine />
+                  </a>
+                </Magnetic>
+                <Magnetic>
+                  <a
+                    href="https://www.facebook.com/xDisrar"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiOutlineFacebook />
+                  </a>
+                </Magnetic>
+                <Magnetic>
+                  <a
+                    href="https://wa.me/923264114782"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaWhatsapp />
+                  </a>
+                </Magnetic>
               </div>
             </div>
 
