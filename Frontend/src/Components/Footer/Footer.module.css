@@ -8,21 +8,25 @@
   margin-top: 3rem;
 }
 .container {
-  max-width: 1400px;  
-  padding: 2rem 1.5rem 1rem;
+  max-width: 1400px;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .grid {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 2.5rem;
+  width: 100%;
 }
 
 .section {
-  flex: 1 1 250px;
-  min-width: 250px;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
 }
 
 .logo {
@@ -129,19 +133,25 @@
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 1rem;
 }
-
+@media (max-width: 1000px) {
+  .grid {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 @media (max-width: 768px) {
   .container {
     margin-top: 1rem;
   }
   .grid {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
   }
   .section {
-    flex: 1 1 100%;
-    min-width: 250px;
+    width: 100%;
+    height: 100%;
   }
   .bottomBar {
     margin-top: 1rem;

@@ -49,7 +49,7 @@ const Footer = ({ sectionRefs }) => {
                   <AiOutlineFacebook />
                 </a>
                 <a
-                  href="https://wa.me/92XXXXXXXXX"
+                  href="https://wa.me/923264114782"
                   target="_blank"
                   rel="noreferrer"
                 >

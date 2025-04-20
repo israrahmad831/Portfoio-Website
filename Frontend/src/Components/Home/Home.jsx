@@ -3,7 +3,7 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { DiNodejsSmall } from "react-icons/di";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaWhatsapp } from "react-icons/fa";
 import { RiGithubLine } from "react-icons/ri";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
@@ -18,7 +18,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const typedref = React.useRef(null);
   useEffect(() => {
-    
     const typed = new Typed(typedref.current, {
       strings: ["Full Stack Developer", "App Developer", "Problem Solver"],
       typedSpeed: 0,
@@ -70,6 +69,13 @@ const Home = () => {
               <a href="https://www.facebook.com/xDisrar" target="blank">
                 <i className="fab fa-linkedin">
                   <AiOutlineFacebook />
+                </i>
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a href="https://wa.me/923264114782" target="blank">
+                <i className="fab fa-linkedin">
+                  <FaWhatsapp />
                 </i>
               </a>
             </Magnetic>
