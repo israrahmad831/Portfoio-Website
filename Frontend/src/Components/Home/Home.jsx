@@ -42,9 +42,7 @@ const Home = () => {
               Hi, I'm Israr Ahmad, a passionate Full-Stack Developer skilled in
               React, JavaScript, and backend technologies. I love building
               dynamic and responsive web applications that deliver seamless user
-              experiences. Currently, I'm working on innovative projects,
-              including my portfolio and a full-stack website. Always eager to
-              learn and grow in the tech world!
+              experiences. 
             </p>
           </div>
           <div className={styles.socialLinks}>

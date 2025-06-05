@@ -103,21 +103,6 @@
   font-weight: bold;
 }
 
-.elements_type::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #6c9ff0, #0e6fdf);
-  transition: width 0.3s ease-in-out;
-}
-
-.elements_type:hover::after {
-  width: 100%;
-}
-
 .contact-info {
   font-size: 0.95rem;
   line-height: 1.6;

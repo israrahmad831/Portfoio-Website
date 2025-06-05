@@ -78,9 +78,9 @@ const Footer = ({ sectionRefs }) => {
                     "Resume",
                     "Contact",
                   ].map((item, index) => (
-                    <Magnetic key={index} className={styles.elements_type}>
+                    <div key={index} className={styles.elements_type}>
                       <li onClick={() => scrollToSection(item)}>{item}</li>
-                    </Magnetic>
+                    </div>
                   ))}
                 </ul>
               </div>

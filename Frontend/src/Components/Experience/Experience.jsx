@@ -9,11 +9,13 @@ const Experience = () => {
     { name: "React.js", level: "Advanced", points: "90%" },
     { name: "Tailwind CSS", level: "Intermediate", points: "70%" },
     { name: "HTML, CSS, JS", level: "Professional", points: "80%" },
+    { name: "React Native", level: "Intermediate", points: "75%" },
   ];
   const bSkills = [
-    { name: "Node.js", level: "Intermediate", points: "75%" },
+    { name: "Node.js", level: "Professional", points: "85%" },
     { name: "MongoDB", level: "Advanced", points: "80%" },
-    { name: "Rest API's", level: "Intermediate", points: "70%" },
+    { name: "Rest API's", level: "Professional", points: "80%" },
+    { name: "Firebase", level: "Intermediate", points: "75%" },
   ];
 
   const progressRefs = useRef([]);
