@@ -7,7 +7,7 @@ import Magnetic from "../../Lib/Magnetic";
 
 const Navbar = ({ sectionRefs }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
