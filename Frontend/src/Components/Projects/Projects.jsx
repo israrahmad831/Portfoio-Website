@@ -65,6 +65,46 @@ const Projects = () => {
         link: "https://heerflyingclub.com",
         tags: ["React.js", "Express", "MongoDB"],
       },
+      {
+        title: "WealthX Broker",
+        description:
+          "A modern trading app for brokers and investors, featuring real-time data and secure transactions.",
+        image: null, // Add image later
+        link: "", // Add link later
+        tags: ["React.js", "Trading", "Finance", "Web App"],
+      },
+      {
+        title: "Global Education",
+        description:
+          "Consultant website for global education services, providing resources and guidance for students.",
+        image: null, // Add image later
+        link: "", // Add link later
+        tags: ["React.js", "Consultancy", "Education", "Web App"],
+      },
+      {
+        title: "FreshBerry",
+        description:
+          "Company portfolio website for FreshBerry, showcasing products and business information.",
+        image: null, // Add image later
+        link: "", // Add link later
+        tags: ["React.js", "Portfolio", "Company", "Web App"],
+      },
+      {
+        title: "Wattsun Invoice",
+        description:
+          "Invoice generator app for Wattsun company, built with React Native for mobile platforms.",
+        image: null, // Add image later
+        link: "", // Add link later
+        tags: ["React Native", "Invoice", "Mobile App"],
+      },
+      {
+        title: "Business Manager",
+        description:
+          "A React Native manager app for businesses such as shops, helping with organization and operations.",
+        image: null, // Add image later
+        link: "", // Add link later
+        tags: ["React Native", "Business", "Manager", "Mobile App"],
+      },
     ],
     Java: [
       {
@@ -89,6 +129,16 @@ const Projects = () => {
         image: Pong,
         link: "https://github.com/israrahmad831/Pong-Game",
         tags: ["C++", "Raylib"],
+      },
+    ],
+    Python: [
+      {
+        title: "Code Teaching Model",
+        description:
+          "A simple Python model that answers questions related to coding languages, designed for educational purposes.",
+        image: null, // Add image later
+        link: "", // Add link later
+        tags: ["Python", "AI", "Education", "Q&A"],
       },
     ],
   };
