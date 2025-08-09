@@ -70,7 +70,7 @@ const Projects = () => {
         description:
           "A modern trading app for brokers and investors, featuring real-time data and secure transactions.",
         image: null, // Add image later
-        link: "", // Add link later
+        link: "https://github.com/SohailShafiq1/Trading-App", // Add link later
         tags: ["React.js", "Trading", "Finance", "Web App"],
       },
       {
@@ -78,7 +78,7 @@ const Projects = () => {
         description:
           "Consultant website for global education services, providing resources and guidance for students.",
         image: null, // Add image later
-        link: "", // Add link later
+        link: "https://github.com/SohailShafiq1/GlobalEducation", // Add link later
         tags: ["React.js", "Consultancy", "Education", "Web App"],
       },
       {
@@ -86,7 +86,7 @@ const Projects = () => {
         description:
           "Company portfolio website for FreshBerry, showcasing products and business information.",
         image: null, // Add image later
-        link: "", // Add link later
+        link: "https://github.com/SohailShafiq1/Fresh-Berry", // Add link later
         tags: ["React.js", "Portfolio", "Company", "Web App"],
       },
       {
@@ -94,7 +94,7 @@ const Projects = () => {
         description:
           "Invoice generator app for Wattsun company, built with React Native for mobile platforms.",
         image: null, // Add image later
-        link: "", // Add link later
+        link: "https://github.com/israrahmad831/Wattsun", // Add link later
         tags: ["React Native", "Invoice", "Mobile App"],
       },
       {
@@ -102,7 +102,7 @@ const Projects = () => {
         description:
           "A React Native manager app for businesses such as shops, helping with organization and operations.",
         image: null, // Add image later
-        link: "", // Add link later
+        link: "https://github.com/israrahmad831/AbrarMughal", // Add link later
         tags: ["React Native", "Business", "Manager", "Mobile App"],
       },
     ],
@@ -137,7 +137,7 @@ const Projects = () => {
         description:
           "A simple Python model that answers questions related to coding languages, designed for educational purposes.",
         image: null, // Add image later
-        link: "", // Add link later
+        link: "https://github.com/israrahmad831/Code-Teacher-Model", // Add link later
         tags: ["Python", "AI", "Education", "Q&A"],
       },
     ],
@@ -195,6 +195,9 @@ const Projects = () => {
                         alt={project.title}
                         className={s.image}
                       />
+                      {!project.image && (
+                        <div className={s.noImage}>Images soon</div>
+                      )}
                       <div className={s.overlay}>
                         <h3 className={s.projectTitle}>{project.title}</h3>
                         <p className={s.projectDescription}>
