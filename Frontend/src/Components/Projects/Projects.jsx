@@ -195,7 +195,7 @@ const Projects = () => {
                         alt={project.title}
                         className={s.image}
                       />
-                      {!project.image && (
+                      {project.image == null && (
                         <div className={s.noImage}>Images soon</div>
                       )}
                       <div className={s.overlay}>
