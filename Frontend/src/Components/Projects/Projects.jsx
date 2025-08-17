@@ -86,7 +86,7 @@ const Projects = () => {
         description:
           "Company portfolio website for FreshBerry, showcasing products and business information.",
         image: null, // Add image later
-        link: "https://github.com/SohailShafiq1/Fresh-Berry", // Add link later
+        link: "https://freshberryuae.com", // Add link later
         tags: ["React.js", "Portfolio", "Company", "Web App"],
       },
       {
@@ -102,7 +102,7 @@ const Projects = () => {
         description:
           "A React Native manager app for businesses such as shops, helping with organization and operations.",
         image: null, // Add image later
-        link: "https://github.com/israrahmad831/AbrarMughal", // Add link later
+        link: "https://github.com/israrahmad831/Business-App", // Add link later
         tags: ["React Native", "Business", "Manager", "Mobile App"],
       },
     ],
