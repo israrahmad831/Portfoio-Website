@@ -1,9 +1,33 @@
+/* Color variables for dark and light mode */
+:root {
+  --primary-gradient: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  --accent: #a855f7;
+  --accent2: #6366f1;
+}
+
+.dark {
+  --navbar-bg: rgba(26, 16, 38, 0.85);
+  --navbar-shadow: 0 8px 32px rgba(168, 85, 247, 0.15);
+  --navbar-border: 1.5px solid rgba(168, 85, 247, 0.12);
+  --navbar-text: #fff;
+  --navbar-hover: #a855f7;
+  --navbar-icon: #a855f7;
+}
+.light {
+  --navbar-bg: rgba(246, 233, 255, 0.85);
+  --navbar-shadow: 0 8px 32px rgba(168, 85, 247, 0.04);
+  --navbar-border: 1.5px solid rgba(168, 85, 247, 0.1);
+  --navbar-text: #3a2352;
+  --navbar-hover: #a855f7;
+  --navbar-icon: #a855f7;
+}
+
 /* Glassmorphism Navbar */
 .navbar {
-  background: rgba(20, 22, 34, 0.7);
+  background: var(--navbar-bg);
   backdrop-filter: blur(16px);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-  border-bottom: 1.5px solid rgba(168, 85, 247, 0.12);
+  box-shadow: var(--navbar-shadow);
+  border-bottom: var(--navbar-border);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +42,7 @@
 .gradientBar {
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+  background: var(--primary-gradient);
   border-radius: 0 0 8px 8px;
   margin-bottom: 0.5rem;
 }
@@ -37,7 +61,7 @@
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,7 +73,7 @@
 }
 .logoAccent {
   font-weight: 900;
-  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -73,7 +97,7 @@
 
 .elements_type {
   position: relative;
-  color: #e0e0e0;
+  color: var(--navbar-text);
   font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -85,7 +109,7 @@
 }
 .elements_type:hover {
   color: #fff;
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(168, 85, 247, 0.12);
 }
 .elements_type::after {
   content: "";
@@ -94,7 +118,7 @@
   bottom: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  background: var(--primary-gradient);
   border-radius: 2px;
   transition: width 0.3s;
   z-index: -1;
@@ -104,7 +128,7 @@
 }
 
 .themeToggle {
-  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  background: var(--primary-gradient);
   border: none;
   border-radius: 50%;
   color: #fff;
@@ -115,7 +139,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 1rem;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12);
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.12);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -128,18 +152,12 @@
   display: none;
   font-size: 2.2rem;
   margin-left: 1rem;
-  color: #a855f7;
+  color: var(--navbar-icon);
   cursor: pointer;
   transition: color 0.2s;
 }
 .menu_bar:hover {
-  color: #6366f1;
-}
-
-/* Dark mode */
-.dark_navbar {
-  background: rgba(18, 18, 28, 0.85) !important;
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
+  color: var(--accent2);
 }
 
 @media (max-width: 800px) {

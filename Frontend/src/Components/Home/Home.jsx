@@ -7,20 +7,19 @@ import { FaReact, FaWhatsapp } from "react-icons/fa";
 import { RiGithubLine } from "react-icons/ri";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./Home.module.css";
-import { useEffect } from "react";
 import Typed from "typed.js";
 import israr from "../../assets/me.png";
 import Magnetic from "../../Lib/Magnetic";
 
 const Home = () => {
-  const typedref = React.useRef(null);
+  const typedref = useRef(null);
   useEffect(() => {
     const typed = new Typed(typedref.current, {
       strings: ["Full Stack Developer", "App Developer", "Problem Solver"],
-      typedSpeed: 0,
-      backSpeed: 50,
+      typeSpeed: 60,
+      backSpeed: 40,
       loop: true,
     });
     return () => {
@@ -29,111 +28,117 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.heroBg}>
-      <div className={styles.mainBox}>
-        <div className={styles.leftSide}>
-          <div className={styles.introBox}>
-            <div className={styles.welcome}>Welcome to My Portfolio</div>
+    <div className={styles.homeRoot}>
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <div className={styles.heroTextBlock}>
             <h1 className={styles.heroTitle}>
-              Hi, I'm{" "}
-              <span className={styles.gradientName}>Israr Ahmad</span>
-              <br />
-              <span ref={typedref} className={styles.typedText} />
+              Hi,{" "}
+              <span className={styles.gradientName}>I'm Israr Ahmad</span>
             </h1>
+            <div className={styles.typedWrap}>
+              <span ref={typedref} className={styles.typedText} />
+            </div>
             <p className={styles.heroDesc}>
-              A passionate Full-Stack Developer skilled in React, JavaScript, and
-              backend technologies. I love building dynamic and responsive web
-              applications that deliver seamless user experiences.
+              Building digital experiences that are fast, beautiful, and scalable.
+              I specialize in full-stack development, modern UI/UX, and robust
+              backend solutions.
+            </p>
+            <div className={styles.heroActions}>
+              <a href="#projects" className={styles.ctaButton}>
+                See My Work
+              </a>
+              <a href="#contact" className={styles.ctaButtonOutline}>
+                Contact Me
+              </a>
+            </div>
+            <div className={styles.socialLinks}>
+              <Magnetic>
+                <a
+                  href="https://www.linkedin.com/in/israrahmad2004/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineLinkedin />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a
+                  href="https://github.com/israrahmad831"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <RiGithubLine />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a
+                  href="https://www.facebook.com/xDisrar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineFacebook />
+                </a>
+              </Magnetic>
+              <Magnetic>
+                <a
+                  href="https://wa.me/923264114782"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp />
+                </a>
+              </Magnetic>
+            </div>
+          </div>
+          <div className={styles.heroImageBlock}>
+            <div className={styles.heroImageBg}>
+              <img
+                src={israr}
+                className={styles.heroImage}
+                alt="Israr Ahmad"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={styles.featuresSection}>
+        <h2 className={styles.featuresTitle}>What I Do</h2>
+        <div className={styles.featuresGrid}>
+          <div className={styles.featureCard}>
+            <FaReact className={styles.featureIcon} />
+            <h3>Frontend Development</h3>
+            <p>
+              Modern, responsive, and interactive UIs using React.js and the
+              latest web technologies.
             </p>
           </div>
-          <div className={styles.socialLinks}>
-            <Magnetic>
-              <a
-                href="https://www.linkedin.com/in/israrahmad2004/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineLinkedin />
-              </a>
-            </Magnetic>
-            <Magnetic>
-              <a
-                href="https://github.com/israrahmad831"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <RiGithubLine />
-              </a>
-            </Magnetic>
-            <Magnetic>
-              <a
-                href="https://www.facebook.com/xDisrar"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineFacebook />
-              </a>
-            </Magnetic>
-            <Magnetic>
-              <a
-                href="https://wa.me/923264114782"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaWhatsapp />
-              </a>
-            </Magnetic>
+          <div className={styles.featureCard}>
+            <DiNodejsSmall className={styles.featureIcon} />
+            <h3>Backend Engineering</h3>
+            <p>
+              Robust APIs and scalable server-side logic with Node.js, Express,
+              and databases.
+            </p>
+          </div>
+          <div className={styles.featureCard}>
+            <SiMongodb className={styles.featureIcon} />
+            <h3>Database Design</h3>
+            <p>
+              Efficient, secure, and scalable data storage with MongoDB and
+              MySQL.
+            </p>
+          </div>
+          <div className={styles.featureCard}>
+            <TbBrandJavascript className={styles.featureIcon} />
+            <h3>JavaScript Expertise</h3>
+            <p>
+              Advanced JavaScript for both frontend and backend, enabling
+              dynamic web apps.
+            </p>
           </div>
         </div>
-        <div className={styles.rightSide}>
-          <div className={styles.imageBox}>
-            <img src={israr} className={styles.Israr} alt="Israr Ahmad" />
-          </div>
-        </div>
-      </div>
-      <div className={styles.TechUsed}>
-        <div className={styles.header}>
-          <h1>Technologies I Work With</h1>
-        </div>
-        <div className={styles.techs}>
-          <div className={styles.technology}>
-            <Magnetic>
-              <FaReact className={styles.icons} />
-            </Magnetic>
-            React.js
-          </div>
-          <div className={styles.technology}>
-            <Magnetic>
-              <DiNodejsSmall className={styles.icons} />
-            </Magnetic>
-            Node.js
-          </div>
-          <div className={styles.technology}>
-            <Magnetic>
-              <SiExpress className={styles.icons} />
-            </Magnetic>
-            Express.JS
-          </div>
-          <div className={styles.technology}>
-            <Magnetic>
-              <SiMongodb className={styles.icons} />
-            </Magnetic>
-            MongoDB
-          </div>
-          <div className={styles.technology}>
-            <Magnetic>
-              <TbBrandJavascript className={styles.icons} />
-            </Magnetic>
-            JavaScript
-          </div>
-          <div className={styles.technology}>
-            <Magnetic>
-              <TbBrandMysql className={styles.icons} />
-            </Magnetic>
-            MySQL
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
