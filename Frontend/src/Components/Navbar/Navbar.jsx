@@ -55,31 +55,34 @@ const Navbar = ({ sectionRefs }) => {
   return (
     <>
       <nav className={`${styles.navbar} ${darkMode ? styles.dark_navbar : ""}`}>
+        <div className={styles.gradientBar}></div>
         <div className={styles.internal}>
           <Magnetic className={styles.logo}>
-            <div onClick={() => scrollToSection("Home")}>IsrarJS</div>
+            <div onClick={() => scrollToSection("Home")}>
+              Israr
+              <span className={styles.logoAccent}>JS</span>
+            </div>
           </Magnetic>
 
           <div className={styles.elements}>
             <ul className={styles.elements_list}>
-              {[
-                "Home",
-                "About",
-                "Experience",
-                "Projects",
-                "Resume",
-                "Contact",
-              ].map((item, index) => (
-                <Magnetic key={index} className={styles.elements_type}>
-                  <li onClick={() => scrollToSection(item)}>{item}</li>
-                </Magnetic>
-              ))}
+              {["Home", "About", "Experience", "Projects", "Resume", "Contact"].map(
+                (item, index) => (
+                  <Magnetic key={index} className={styles.elements_type}>
+                    <li onClick={() => scrollToSection(item)}>{item}</li>
+                  </Magnetic>
+                )
+              )}
             </ul>
 
             <Magnetic>
-              <div className={styles.color_mode} onClick={toggleTheme}>
+              <button
+                className={styles.themeToggle}
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+              >
                 {darkMode ? <MdLightMode /> : <MdDarkMode />}
-              </div>
+              </button>
             </Magnetic>
 
             <div className={styles.menu_bar} onClick={toggleSidebar}>

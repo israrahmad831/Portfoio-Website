@@ -1,12 +1,26 @@
+/* Glassmorphism Navbar */
 .navbar {
-  background-color: #f4f6fa;
+  background: rgba(20, 22, 34, 0.7);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border-bottom: 1.5px solid rgba(168, 85, 247, 0.12);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
+  top: 0;
+  left: 0;
   transition: background 0.3s ease-in-out;
+}
+
+.gradientBar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 0.5rem;
 }
 
 .internal {
@@ -15,18 +29,35 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
 }
 
 .logo {
-  font-size: 1.5rem;
-  margin: 1.5rem 1rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #3b82f6;
+  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   cursor: pointer;
+  letter-spacing: -0.03em;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.logoAccent {
+  font-weight: 900;
+  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .elements {
   display: flex;
+  align-items: center;
 }
 
 .elements_list {
@@ -35,78 +66,90 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .elements_type {
-  color: #0e6fdf;
-  margin: 1.7rem 1rem;
-  font-size: 1.2rem;
-  text-decoration: none;
+  position: relative;
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  color: #2d2e32;
-  transition: color 0.3s ease-in-out;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  z-index: 1;
 }
-
+.elements_type:hover {
+  color: #fff;
+  background: rgba(99, 102, 241, 0.12);
+}
 .elements_type::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: 0;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #6c9ff0, #0e6fdf);
-  transition: width 0.3s ease-in-out;
+  height: 3px;
+  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  border-radius: 2px;
+  transition: width 0.3s;
+  z-index: -1;
 }
-
 .elements_type:hover::after {
   width: 100%;
 }
 
-.color_mode {
-  font-size: 2rem;
-  margin: 1.7rem 1rem;
+.themeToggle {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.6rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12);
   cursor: pointer;
-  color: #3b82f6;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.color_mode:hover {
-  transform: scale(1.3);
-}
-
-.dark {
-  background-color: #121212;
-  color: white;
-}
-
-.dark .navbar {
-  background-color: #1e1e1e;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.dark .elements_type {
-  color: white;
-}
-
-.dark .color_mode {
-  color: white;
+.themeToggle:hover {
+  transform: scale(1.13);
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.18);
 }
 
 .menu_bar {
   display: none;
+  font-size: 2.2rem;
+  margin-left: 1rem;
+  color: #a855f7;
+  cursor: pointer;
+  transition: color 0.2s;
 }
-.elements_type:hover {
-  color: #0e6fdf;
-  font-weight: bold;
+.menu_bar:hover {
+  color: #6366f1;
 }
+
+/* Dark mode */
+.dark_navbar {
+  background: rgba(18, 18, 28, 0.85) !important;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
+}
+
 @media (max-width: 800px) {
   .elements_list {
     display: none;
   }
   .menu_bar {
     display: block;
-    font-size: 2rem;
-    margin: 1.7rem 1rem;
-    cursor: pointer;
+  }
+  .internal {
+    padding: 0.5rem 0.5rem;
   }
 }

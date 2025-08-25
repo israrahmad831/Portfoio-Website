@@ -1,3 +1,34 @@
+/* Hero background with subtle gradients */
+.heroBg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #23243a 0%, #1a1b2f 100%);
+  position: relative;
+  overflow: hidden;
+}
+.heroBg::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  opacity: 0.18;
+  z-index: 0;
+}
+.heroBg::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+  opacity: 0.13;
+  z-index: 0;
+}
+
 .mainBox {
   display: flex;
   align-items: center;
@@ -5,8 +36,9 @@
   gap: 6rem;
   max-width: 1400px;
   margin: auto;
-  padding: 8rem 4rem;
-  padding-bottom: 0;
+  padding: 8rem 4rem 0 4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .leftSide {
@@ -17,29 +49,49 @@
   align-items: flex-start;
   width: 50%;
   height: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 1.5rem;
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.08);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(8px);
 }
 
 .introBox {
   max-width: 600px;
 }
 
-.introBox h1 {
-  font-size: 2rem;
+.welcome {
+  font-size: 1.1rem;
+  color: #a855f7;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  line-height: 1.2;
 }
-
-.introBox span {
+.gradientName {
+  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 900;
-  color: #2575fc;
 }
-
-.introBox p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+.typedText {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #a855f7;
+  margin-left: 0.2rem;
+}
+.heroDesc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
   margin-bottom: 2.5rem;
   font-weight: 400;
 }
@@ -47,27 +99,28 @@
 .socialLinks {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.2rem;
+  margin-top: 0.5rem;
 }
-
 .socialLinks a {
   font-size: 2rem;
-  color: #3b82f6;
+  color: #fff;
   text-decoration: none;
   padding: 12px;
   border-radius: 50%;
-  background: rgba(195, 164, 228, 0.15);
-  transition: all 0.3s ease-in-out;
+  background: rgba(99,102,241,0.18);
+  box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+  transition: all 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .socialLinks a:hover {
-  background: #3b82f6;
-  color: white;
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #fff;
+  transform: scale(1.13);
+  box-shadow: 0 4px 16px rgba(168,85,247,0.18);
 }
 
 .rightSide {
@@ -82,20 +135,17 @@
 .imageBox {
   width: 380px;
   height: 400px;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 15px 30px rgba(99,102,241,0.10);
   backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  padding-bottom: 0;
-  padding-top: 30px;
+  padding: 20px 0 0 0;
   position: relative;
 }
-
 .imageBox::before {
   content: "";
   position: absolute;
@@ -105,16 +155,14 @@
   border-radius: 50%;
   z-index: -1;
   filter: blur(80px);
-  opacity: 0.5;
+  opacity: 0.4;
 }
-
 .Israr {
   width: 100%;
   height: auto;
-  border-radius: 15px;
-  transition: transform 0.4s ease;
+  border-radius: 18px;
+  transition: transform 0.4s;
 }
-
 .Israr:hover {
   transform: scale(1.05);
 }
@@ -123,14 +171,18 @@
   margin-top: 3rem;
   text-align: center;
   margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
 }
-
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-
 .techs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,7 +191,6 @@
   margin: auto;
   padding: 1rem;
 }
-
 .technology {
   display: flex;
   flex-direction: column;
@@ -148,84 +199,33 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  background: rgba(195, 164, 228, 0.15);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(99,102,241,0.10);
+  box-shadow: 0 3px 10px rgba(99,102,241,0.10);
+  transition: all 0.3s;
 }
-
 .technology:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #fff;
 }
-
 .icons {
   font-size: 2.5rem;
-
-  color: #3b82f6;
+  color: #6366f1;
   margin-bottom: 0.5rem;
+  transition: color 0.3s;
 }
+.technology:hover .icons {
+  color: #fff;
+}
+
 @media (max-width: 1024px) {
   .mainBox {
     justify-content: center;
-  }
-  .introBox h1 {
-    margin-bottom: 0.5rem;
-  }
-  .leftSide {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .rightSide {
-    width: 30%;
-  }
-  .introBox p {
-    line-height: normal;
-  }
-}
-@media (max-width: 800px) {
-  .mainBox {
-    flex-direction: column-reverse;
-    padding-top: 7rem;
-    gap: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .rightSide {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  .imageBox {
-    border-radius: 50%;
-  }
-  .leftSide {
-    width: 100%;
-  }
-
-  .imageBox {
-    width: 300px;
-    height: 320px;
-  }
-  .introBox {
-    line-height: normal;
-  }
-  .introBox h1 {
-    font-size: 1.5rem;
-  }
-  .Israr {
-    width: 350px;
-    height: 100%;
-  }
-
-  .socialLinks {
-    justify-content: center;
-  }
-
-  .techs {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
+    padding: 6rem 1.5rem 0 1.5rem;
+ 
     max-width: 400px;
   }
   .header h1 {
