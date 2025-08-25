@@ -72,7 +72,7 @@ const App = () => {
               color: "#3b82f6",
             }}
           >
-            📄 Wanna See My Resume?
+            Website is Under Development! {/* 📄 Wanna See My Resume? */}
           </h3>
           <p style={{ fontSize: "0.95rem", lineHeight: 1.4 }}>
             Explore my experience and education in a sleek document.
