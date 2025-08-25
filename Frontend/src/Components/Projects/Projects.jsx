@@ -195,9 +195,6 @@ const Projects = () => {
                         alt={project.title}
                         className={s.image}
                       />
-                      {project.image == null && (
-                        <div className={s.noImage}>Images soon</div>
-                      )}
                       <div className={s.overlay}>
                         <h3 className={s.projectTitle}>{project.title}</h3>
                         <p className={s.projectDescription}>
