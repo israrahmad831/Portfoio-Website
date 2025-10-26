@@ -129,7 +129,7 @@ export default function Home() {
               <p className="text-gray-400 text-lg font-medium mb-3 tracking-wide">
                 CREATIVE DEVELOPER
               </p>
-              <h1 className="text-5xl sm:text-6xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Full Stack Developer
