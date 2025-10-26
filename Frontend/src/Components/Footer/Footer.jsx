@@ -47,25 +47,25 @@ export default function Footer() {
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://linkedin.com/in/israrahmad2004",
       color: "hover:text-blue-400",
     },
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/yourprofile",
+      url: "https://github.com/israrahmad831",
       color: "hover:text-gray-300",
     },
     {
       icon: Facebook,
       name: "Facebook",
-      url: "https://facebook.com/yourprofile",
+      url: "https://facebook.com/xDisrar",
       color: "hover:text-blue-500",
     },
     {
       icon: MessageCircle,
       name: "WhatsApp",
-      url: "https://wa.me/1234567890",
+      url: "https://wa.me/+923264114782",
       color: "hover:text-green-400",
     },
   ];
@@ -95,7 +95,7 @@ export default function Footer() {
           {/* Brand & Description */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
-              John Doe
+              Israr Ahmad
             </h3>
             <p className="text-gray-400 text-sm max-w-xs">
               Full Stack Developer crafting beautiful digital experiences
@@ -158,7 +158,7 @@ export default function Footer() {
         >
           <p className="text-gray-400 text-sm text-center sm:text-left">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-semibold">John Doe</span>. All
+            <span className="text-white font-semibold">Israr Ahmad</span>. All
             rights reserved.
           </p>
 
@@ -170,7 +170,7 @@ export default function Footer() {
               fill="currentColor"
               style={{ animation: "pulse 2s infinite" }}
             />
-            <span>by John Doe</span>
+            <span>Israr Ahmad</span>
           </div>
         </div>
       </div>
