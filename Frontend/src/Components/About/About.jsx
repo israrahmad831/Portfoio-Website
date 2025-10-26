@@ -326,6 +326,10 @@ export default function About() {
           <p className="text-gray-300 text-lg mb-6">Want to work together?</p>
           <a
             href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             Let's Create Something Amazing

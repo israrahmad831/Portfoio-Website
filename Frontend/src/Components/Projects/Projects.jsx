@@ -329,7 +329,7 @@ export default function Projects() {
           style={{ transitionDelay: "1000ms" }}
         >
           <a
-            href="https://github.com/yourprofile"
+            href="https://github.com/israrahmad831?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gray-800/50 backdrop-blur-sm text-white rounded-full font-semibold border-2 border-gray-700 hover:border-gray-500 hover:bg-gray-700/50 hover:scale-105 transition-all duration-300"
