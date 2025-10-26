@@ -255,49 +255,58 @@ export default function About() {
             <p className="text-gray-400">The path that led me here</p>
           </div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 opacity-20 hidden md:block"></div>
-
-            <div className="space-y-12">
+          <div className="relative max-w-6xl mx-auto">
+            {/* Timeline line - removed along with dots */}
+            <div className="space-y-16">
               {journey.map((item, index) => (
                 <div
                   key={item.year}
-                  className={`relative flex flex-col md:flex-row items-center gap-6 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className="relative"
                   style={{
                     animation: inView
                       ? `fadeInScale 0.6s ease-out ${1000 + index * 150}ms both`
                       : "none",
                   }}
                 >
-                  {/* Year Badge */}
-                  <div className="relative flex-shrink-0 w-full md:w-5/12 flex justify-center md:justify-end">
+                  <div
+                    className={`flex flex-col md:flex-row items-center gap-6 ${
+                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
+                  >
+                    {/* Year Badge */}
                     <div
-                      className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${
+                      className={`w-full md:w-5/12 flex ${
                         index % 2 === 0
-                          ? "from-blue-500 to-purple-500"
-                          : "from-purple-500 to-pink-500"
-                      } rounded-full shadow-lg`}
+                          ? "md:justify-end md:pr-8 justify-center"
+                          : "md:justify-start md:pl-8 justify-center"
+                      }`}
                     >
-                      <Award className="text-white" size={20} />
-                      <span className="text-white font-bold text-lg">
-                        {item.year}
-                      </span>
+                      <div
+                        className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${
+                          index % 2 === 0
+                            ? "from-blue-500 to-purple-500"
+                            : "from-purple-500 to-pink-500"
+                        } rounded-full shadow-lg`}
+                      >
+                        <Award className="text-white" size={20} />
+                        <span className="text-white font-bold text-lg">
+                          {item.year}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Timeline dot */}
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-4 border-gray-900 z-10 shadow-lg"></div>
-
-                  {/* Content Card */}
-                  <div className="w-full md:w-5/12">
-                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105">
-                      <h4 className="text-xl font-bold text-white mb-2">
-                        {item.title}
-                      </h4>
-                      <p className="text-gray-400">{item.description}</p>
+                    {/* Content Card */}
+                    <div
+                      className={`w-full md:w-5/12 ${
+                        index % 2 === 0 ? "md:text-left" : "md:text-right"
+                      }`}
+                    >
+                      <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <h4 className="text-xl font-bold text-white mb-2">
+                          {item.title}
+                        </h4>
+                        <p className="text-gray-400">{item.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
