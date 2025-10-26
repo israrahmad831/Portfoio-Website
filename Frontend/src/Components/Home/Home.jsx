@@ -11,6 +11,8 @@ import {
   Code2,
   Rocket,
 } from "lucide-react";
+import Israr from "../../assets/Israr.png";
+import CV from "../../assets/CV.pdf";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -34,43 +36,43 @@ export default function Home() {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://linkedin.com/in/israrahmad2004",
       color:
         "hover:bg-blue-500/20 hover:border-blue-500/50 hover:text-blue-400",
     },
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/yourprofile",
+      url: "https://github.com/israrahmad831",
       color:
         "hover:bg-gray-600/20 hover:border-gray-500/50 hover:text-gray-300",
     },
     {
       name: "Facebook",
       icon: Facebook,
-      url: "https://facebook.com/yourprofile",
+      url: "https://facebook.com/xDisrar",
       color:
         "hover:bg-blue-600/20 hover:border-blue-600/50 hover:text-blue-400",
     },
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      url: "https://wa.me/1234567890",
+      url: "https://wa.me/+923264114782",
       color:
         "hover:bg-green-500/20 hover:border-green-500/50 hover:text-green-400",
     },
   ];
 
   const stats = [
-    { number: "5+", label: "Years Experience", icon: Rocket },
-    { number: "100+", label: "Projects Completed", icon: Code2 },
-    { number: "50+", label: "Happy Clients", icon: Sparkles },
+    { number: "2+", label: "Years Experience", icon: Rocket },
+    { number: "20+", label: "Projects Completed", icon: Code2 },
+    { number: "10+", label: "Happy Clients", icon: Sparkles },
   ];
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden pb-10"
     >
       {/* Animated background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -127,12 +129,10 @@ export default function Home() {
               <p className="text-gray-400 text-lg font-medium mb-3 tracking-wide">
                 CREATIVE DEVELOPER
               </p>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-                Building Digital
-                <br />
+              <h1 className="text-5xl sm:text-6xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Experiences
+                    Full Stack Developer
                   </span>
                   <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full"></div>
                 </span>
@@ -149,11 +149,14 @@ export default function Home() {
               style={{ transitionDelay: "400ms" }}
             >
               <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-                I'm <span className="text-white font-semibold">John Doe</span>,
-                a passionate Full Stack Developer specializing in crafting
-                exceptional digital experiences. I combine creativity with
-                technical expertise to build scalable, user-centric applications
-                that make an impact.
+                I'm{" "}
+                <span className="text-white font-semibold">Israr Ahmad</span>, a
+                passionate Full Stack Developer specializing in the MERN stack.
+                I create scalable and high-performance web applications focused
+                on clean architecture, responsive design, and smooth user
+                experiences. With a strong command of both frontend and backend
+                technologies, I’m dedicated to transforming complex ideas into
+                efficient, reliable digital solutions.
               </p>
             </div>
 
@@ -217,7 +220,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/resume.pdf"
+                href={CV}
                 download
                 className="group px-8 py-4 bg-transparent text-white rounded-full font-semibold border-2 border-gray-600 hover:border-white hover:bg-white/5 hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
@@ -287,7 +290,7 @@ export default function Home() {
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-4 border-gray-700/30 backdrop-blur-sm shadow-2xl group-hover:scale-105 transition-all duration-700">
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop"
+                  src={Israr}
                   alt="Profile"
                   className="w-full h-full object-cover relative z-10"
                 />

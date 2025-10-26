@@ -134,11 +134,12 @@ export default function Projects() {
     <section
       ref={sectionRef}
       id="projects"
-      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-24 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-10 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute top-1/3 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/3 left-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}

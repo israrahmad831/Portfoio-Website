@@ -60,34 +60,34 @@ export default function Skills() {
 
   const skills = {
     frontend: [
-      { name: "React.js", level: 95, icon: "⚛️", experience: "4 years" },
-      { name: "Next.js", level: 90, icon: "▲", experience: "3 years" },
+      { name: "React.js", level: 95, icon: "⚛️", experience: "3 years" },
+      { name: "Next.js", level: 90, icon: "▲", experience: "2 years" },
       { name: "TypeScript", level: 88, icon: "📘", experience: "3 years" },
       { name: "Tailwind CSS", level: 92, icon: "🎨", experience: "3 years" },
-      { name: "JavaScript", level: 94, icon: "🟨", experience: "5 years" },
-      { name: "HTML/CSS", level: 96, icon: "🌐", experience: "5 years" },
-      { name: "Vue.js", level: 85, icon: "💚", experience: "2 years" },
-      { name: "Redux", level: 87, icon: "🔄", experience: "3 years" },
+      { name: "JavaScript", level: 94, icon: "🟨", experience: "3 years" },
+      { name: "HTML/CSS", level: 96, icon: "🌐", experience: "3 years" },
+      { name: "Vue.js", level: 85, icon: "💚", experience: "1 years" },
+      { name: "Redux", level: 87, icon: "🔄", experience: "2 years" },
     ],
     backend: [
-      { name: "Node.js", level: 91, icon: "🟢", experience: "4 years" },
-      { name: "Express.js", level: 89, icon: "🚂", experience: "4 years" },
+      { name: "Node.js", level: 91, icon: "🟢", experience: "3 years" },
+      { name: "Express.js", level: 89, icon: "🚂", experience: "3 years" },
       { name: "MongoDB", level: 86, icon: "🍃", experience: "3 years" },
-      { name: "PostgreSQL", level: 84, icon: "🐘", experience: "3 years" },
-      { name: "Python", level: 82, icon: "🐍", experience: "2 years" },
-      { name: "REST API", level: 93, icon: "🔌", experience: "4 years" },
-      { name: "GraphQL", level: 80, icon: "◈", experience: "2 years" },
-      { name: "Firebase", level: 88, icon: "🔥", experience: "3 years" },
+      { name: "PostgreSQL", level: 84, icon: "🐘", experience: "2 years" },
+      { name: "Python", level: 82, icon: "🐍", experience: "1 years" },
+      { name: "REST API", level: 93, icon: "🔌", experience: "3 years" },
+      { name: "GraphQL", level: 80, icon: "◈", experience: "1 years" },
+      { name: "Firebase", level: 88, icon: "🔥", experience: "2 years" },
     ],
     tools: [
-      { name: "Git & GitHub", level: 94, icon: "🔀", experience: "5 years" },
-      { name: "Docker", level: 83, icon: "🐳", experience: "2 years" },
+      { name: "Git & GitHub", level: 94, icon: "🔀", experience: "3 years" },
+      { name: "Docker", level: 83, icon: "🐳", experience: "1 years" },
       { name: "AWS", level: 81, icon: "☁️", experience: "2 years" },
       { name: "Figma", level: 89, icon: "🎨", experience: "3 years" },
-      { name: "VS Code", level: 96, icon: "💻", experience: "5 years" },
-      { name: "Postman", level: 92, icon: "📮", experience: "4 years" },
+      { name: "VS Code", level: 96, icon: "💻", experience: "3 years" },
+      { name: "Postman", level: 92, icon: "📮", experience: "2 years" },
       { name: "Linux", level: 85, icon: "🐧", experience: "3 years" },
-      { name: "CI/CD", level: 80, icon: "🔄", experience: "2 years" },
+      { name: "CI/CD", level: 80, icon: "🔄", experience: "1 years" },
     ],
   };
 
@@ -116,11 +116,12 @@ export default function Skills() {
     <section
       ref={sectionRef}
       id="skills"
-      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-24 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-10 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -297,25 +298,6 @@ export default function Skills() {
               );
             })}
           </div>
-        </div>
-
-        {/* CTA */}
-        <div
-          className={`text-center mt-16 transition-all duration-1000 ${
-            inView ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
-          style={{ transitionDelay: "1400ms" }}
-        >
-          <p className="text-gray-300 text-lg mb-6">
-            Interested in working together?
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-          >
-            Let's Build Something Great
-            <Cloud size={20} />
-          </a>
         </div>
       </div>
 

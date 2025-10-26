@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Mail,
   Phone,
@@ -57,37 +58,52 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+    // EmailJS configuration
+    const serviceId = "service_ftbunhs";
+    const templateId = "template_5f34w8c";
+    const publicKey = "kW_4xhjRy61h3eR9r";
 
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    }, 2000);
+    // Send email using EmailJS
+    emailjs.send(serviceId, templateId, formData, publicKey).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setIsSubmitting(false);
+        setIsSuccess(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+
+        setTimeout(() => {
+          setIsSuccess(false);
+        }, 5000);
+      },
+      (error) => {
+        console.error("FAILED...", error);
+        setIsSubmitting(false);
+        alert("Failed to send message. Please try again.");
+      }
+    );
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      value: "hello@johndoe.com",
-      link: "mailto:hello@johndoe.com",
+      value: "israrahmad2004.aa@gmail.com",
+      link: "mailto:israrahmad2004.aa@gmail.com",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+92 326 4114782",
+      link: "tel:+923264114782",
       color: "from-green-500 to-emerald-500",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
-      link: "https://maps.google.com",
+      value: "Islamabad, PK",
+      link: "https://maps.google.com/?q=Islamabad,+PK",
+      target: "_blank",
       color: "from-purple-500 to-pink-500",
     },
   ];
@@ -96,25 +112,25 @@ export default function Contact() {
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://linkedin.com/in/israrahmad2004",
       color: "hover:bg-blue-500",
     },
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/yourprofile",
+      url: "https://github.com/israrahmad831",
       color: "hover:bg-gray-600",
     },
     {
       icon: Facebook,
       name: "Facebook",
-      url: "https://facebook.com/yourprofile",
+      url: "https://facebook.com/xDisrar",
       color: "hover:bg-blue-600",
     },
     {
       icon: MessageCircle,
       name: "WhatsApp",
-      url: "https://wa.me/1234567890",
+      url: "https://wa.me/+923264114782",
       color: "hover:bg-green-500",
     },
   ];
@@ -129,10 +145,11 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-24 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-10 overflow-hidden"
     >
       <div className="absolute top-1/4 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 left-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div
@@ -307,7 +324,7 @@ export default function Contact() {
                 </div>
               )}
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-300 font-medium mb-2">
@@ -318,6 +335,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="John Doe"
                     />
@@ -331,6 +349,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="john@example.com"
                     />
@@ -346,6 +365,7 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     placeholder="Project Inquiry"
                   />
@@ -360,13 +380,14 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
+                    required
                     className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
 
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={isSubmitting}
                   className="group relative w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
                 >
@@ -388,7 +409,7 @@ export default function Contact() {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

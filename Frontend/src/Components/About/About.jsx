@@ -69,24 +69,24 @@ export default function About() {
 
   const journey = [
     {
-      year: "2018",
+      year: "2022",
       title: "Started Journey",
       description: "Began coding and fell in love with development",
     },
     {
-      year: "2020",
+      year: "2023",
       title: "First Major Project",
       description: "Built and launched a successful web application",
     },
     {
-      year: "2022",
+      year: "2024",
       title: "Team Lead",
       description: "Led a team of developers on enterprise projects",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Current",
-      description: "Building innovative solutions and mentoring developers",
+      description: "Continuing to grow and take on new challenges in tech",
     },
   ];
 
@@ -101,11 +101,12 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-24 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8 py-10 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute top-1/4 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
