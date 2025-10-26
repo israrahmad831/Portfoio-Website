@@ -166,18 +166,18 @@ export default function Projects() {
 
         {/* Filter Tabs */}
         <div
-          className={`flex flex-wrap justify-center gap-3 mb-16 transition-all duration-1000 ${
+          className={`flex justify-center mb-16 transition-all duration-1000 ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-full backdrop-blur-sm">
-            <Filter className="text-gray-400" size={16} />
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-full backdrop-blur-sm max-w-full">
+            <Filter className="text-gray-400 flex-shrink-0" size={16} />
             {filters.map((filter, index) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${
                   activeFilter === filter
                     ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
                     : "text-gray-400 hover:text-white hover:bg-gray-700/50"
