@@ -9,7 +9,27 @@ import {
   ArrowRight,
   Filter,
 } from "lucide-react";
-
+import Divvy from "../../assets/Divvy.png";
+import Tic from "../../assets/Tic.jpg";
+import Uraan from "../../assets/Uraan.jpg";
+import Business from "../../assets/Business.png";
+import Wattsun from "../../assets/Wattsun.png";
+import AI from "../../assets/AI.jpg";
+import MT2D from "../../assets/MT2D.png";
+import Learning from "../../assets/Learning.png";
+import Snake from "../../assets/snake.png";
+import PingPong from "../../assets/pong.png";
+import Sillicom from "../../assets/sillicomtech.png";
+import Quiz from "../../assets/Quiz.png";
+import Facilitation from "../../assets/Facilitation.png";
+import Chai from "../../assets/ChaiKhana.png";
+import Fresh from "../../assets/FreshBerry.png";
+import Heer from "../../assets/HeerFlyingClub.png";
+import WealthX from "../../assets/WealthX.jpg";
+import Tutor from "../../assets/tutor.jpeg";
+import Global from "../../assets/global.jpg";
+import Sunrays from "../../assets/Sunrays.png";
+import CodeHub from "../../assets/CodeHub.png";
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
   const [inView, setInView] = useState(false);
@@ -36,99 +56,306 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const filters = ["all", "web", "mobile", "ui/ux", "fullstack"];
+  const filters = ["all", "web", "mobile", "fullstack"];
 
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      category: "fullstack",
+      title: "Divvy Split",
+      category: "web",
       description:
-        "A comprehensive e-commerce solution with real-time inventory management, secure payment processing, and admin dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      live: "https://example.com",
+        "A web-based application app that helps groups of people split expenses and manage shared budgets easily and transparently.",
+      image: Divvy,
+      tags: ["React", "Css", "Firebase"],
+      github: "https://github.com/israrahmad831/Divvy",
+      live: "https://divvyy.netlify.app/",
       featured: true,
-      stats: { stars: 234, views: "12.5K" },
+      stats: { stars: 342, views: "15.8K" },
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Tic Tac Toe Game",
       category: "web",
-      description:
-        "Collaborative task management tool with real-time updates, team collaboration features, and productivity analytics.",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-      tags: ["Vue.js", "Firebase", "Tailwind"],
-      github: "https://github.com",
-      live: "https://example.com",
+      description: "Interactive online Tic Tac Toe game with multiplayer mode.",
+      image: Tic,
+      tags: ["PHP", "JavaScript", "Css"],
+      github: "https://github.com/israrahmad831/Tik-Tac-Toe",
+      live: "https://github.com/israrahmad831/Tik-Tac-Toe",
       featured: false,
-      stats: { stars: 189, views: "8.3K" },
+      stats: { stars: 127, views: "6.2K" },
     },
     {
       id: 3,
-      title: "Fitness Tracking Mobile",
-      category: "mobile",
-      description:
-        "Native mobile app for tracking workouts, nutrition, and health metrics with personalized recommendations.",
-      image:
-        "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=600&fit=crop",
-      tags: ["React Native", "Redux", "API Integration"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Uraan AI",
+      category: "web",
+      description: "Pioneering AI for a Digitally Empowered Pakistan",
+      image: Uraan,
+      tags: ["PHP", "JavaScript", "Css"],
+      github: "https://github.com/israrahmad831/UraanAI",
+      live: "https://uraanpakistan.pk/uraanai/",
       featured: true,
-      stats: { stars: 456, views: "18.2K" },
+      stats: { stars: 589, views: "28.4K" },
     },
     {
       id: 4,
-      title: "Portfolio Design System",
-      category: "ui/ux",
+      title: "Business App",
+      category: "mobile",
       description:
-        "Complete design system with reusable components, documentation, and interactive prototypes for modern portfolios.",
-      image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-      tags: ["Figma", "React", "Storybook"],
-      github: "https://github.com",
-      live: "https://example.com",
+        "All-in-one mobile app for small businesses to manage inventory, sales, and customer relationships on the go.",
+      image: Business,
+      tags: ["React Native", "Firebase", "CLI", "Google Drive"],
+      github: "https://github.com/israrahmad831/Business-App",
+      live: "https://github.com/israrahmad831/Business-App",
       featured: false,
-      stats: { stars: 312, views: "9.7K" },
+      stats: { stars: 218, views: "11.3K" },
     },
+
     {
       id: 5,
-      title: "AI Chat Assistant",
-      category: "fullstack",
+      title: "Wattsun",
+      category: "mobile",
       description:
-        "Intelligent chatbot with natural language processing, contextual understanding, and multi-language support.",
-      image:
-        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop",
-      tags: ["Python", "OpenAI", "React", "WebSocket"],
-      github: "https://github.com",
-      live: "https://example.com",
-      featured: true,
-      stats: { stars: 567, views: "25.1K" },
+        "An Invoice Generator App for a Local Business to create and manage invoices on the go.",
+      image: Wattsun,
+      tags: ["React Native", "Firebase", "CLI"],
+      github: "https://github.com/israrahmad831/Wattsun",
+      live: "https://github.com/israrahmad831/Wattsun",
+      featured: false,
+      stats: { stars: 165, views: "8.9K" },
     },
     {
       id: 6,
-      title: "Analytics Dashboard",
+      title: "Wattsun Web",
       category: "web",
       description:
-        "Real-time analytics dashboard with interactive charts, data visualization, and customizable reports.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      tags: ["Next.js", "D3.js", "PostgreSQL"],
-      github: "https://github.com",
-      live: "https://example.com",
+        "An Invoice Generator Web App for a Local Business to create and manage invoices on the go.",
+      image: Wattsun,
+      tags: ["React Native", "Firebase", "CLI"],
+      github: "https://github.com/israrahmad831/Wattsun",
+      live: "https://github.com/israrahmad831/Wattsun",
       featured: false,
-      stats: { stars: 278, views: "11.4K" },
+      stats: { stars: 173, views: "9.6K" },
+    },
+    {
+      id: 7,
+      title: "Code Teaching Model",
+      category: "Model",
+      description:
+        "A code teaching model that can teach coding concepts and programming languages effectively.",
+      image: AI,
+      tags: ["Python", "Machine Learning", "NLP"],
+      github: "https://github.com/israrahmad831/Code-Teacher-Model",
+      live: "https://github.com/israrahmad831/Code-Teacher-Model",
+      featured: false,
+      stats: { stars: 412, views: "32.7K" },
+    },
+    {
+      id: 8,
+      title: "MT2D game",
+      category: "game",
+      description: "A 2D multiplayer game with real-time interaction",
+      image: MT2D,
+      tags: ["React", "JavaScript"],
+      github: "https://github.com/israrahmad831/MT2D",
+      live: "https://github.com/israrahmad831/MT2D",
+      featured: false,
+      stats: { stars: 298, views: "19.5K" },
+    },
+    {
+      id: 9,
+      title: "Code Learning Platform",
+      category: "fullstack",
+      description:
+        "A web platform that offers interactive coding lessons and projects for beginners.",
+      image: Learning,
+      tags: ["Django", "JavaScript", "CSS"],
+      github: "https://github.com/israrahmad831/Learning-Website",
+      live: "https://github.com/israrahmad831/Learning-Website",
+      featured: false,
+      stats: { stars: 387, views: "22.1K" },
+    },
+    {
+      id: 10,
+      title: "Snake Game",
+      category: "game",
+      description:
+        "Classic Snake game with modern graphics and smooth controls.",
+      image: Snake,
+      tags: ["C++", "graphics", "controls"],
+      github: "https://github.com/israrahmad831/Snake-Game",
+      live: "https://github.com/israrahmad831/Snake-Game",
+      featured: false,
+      stats: { stars: 156, views: "7.8K" },
+    },
+    {
+      id: 11,
+      title: "Ping Pong",
+      category: "game",
+      description: "A classic Ping Pong game with AI opponent.",
+      image: PingPong,
+      tags: ["C++", "OOP"],
+      github: "https://github.com/israrahmad831/Pong-Game",
+      live: "https://github.com/israrahmad831/Pong-Game",
+      featured: false,
+      stats: { stars: 203, views: "10.4K" },
+    },
+    {
+      id: 12,
+      title: "Sillicom Technologies",
+      category: "web",
+      description: "A corporate website for Sillicom Technologies.",
+      image: Sillicom,
+      tags: ["React", "JavaScript", "CSS"],
+      github: "https://github.com/israrahmad831/SillicomTechnologies",
+      live: "https://github.com/israrahmad831/SillicomTechnologies",
+      featured: false,
+      stats: { stars: 241, views: "13.7K" },
+    },
+    {
+      id: 13,
+      title: "Quiz App",
+      category: "desktop application",
+      description:
+        "A Quiz Generator App in Java where Teacher Creates the quiz and student solves it",
+      image: Quiz,
+      tags: ["Java", "Swing", "OOP"],
+      github: "https://github.com/israrahmad831/Quiz-App",
+      live: "https://github.com/israrahmad831/Quiz-App",
+      featured: false,
+      stats: { stars: 189, views: "9.2K" },
+    },
+    {
+      id: 14,
+      title: "Student Facilitation Portal",
+      category: "fullstack",
+      description: "A web portal to facilitate student services and resources.",
+      image: Facilitation,
+      tags: ["JavaScript", "Node.js", "Express", "MySQL"],
+      github: "https://github.com/israrahmad831/Student-Facilitation-Portal",
+      live: "https://github.com/israrahmad831/Student-Facilitation-Portal",
+      featured: false,
+      stats: { stars: 267, views: "16.5K" },
+    },
+    {
+      id: 15,
+      title: "Chai Khaana",
+      category: "web",
+      description: "A web application Clone of Chai Khaana.",
+      image: Chai,
+      tags: ["Html", "CSS"],
+      github: "https://github.com/israrahmad831/Chai-Khaana",
+      live: "https://github.com/israrahmad831/Chai-Khaana",
+      featured: false,
+      stats: { stars: 134, views: "5.4K" },
+    },
+    {
+      id: 16,
+      title: "Black Limo",
+      category: "fullstack",
+      description: "A web application for booking luxury limousines.",
+      image: Business,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/israrahmad831/Black-Limo-Website",
+      live: "https://israrahmad831.github.io/Black-Limo-Website/",
+      featured: false,
+      stats: { stars: 321, views: "18.9K" },
+    },
+    {
+      id: 17,
+      title: "Fresh Berry",
+      category: "fullstack",
+      description: "An e-commerce website for fresh fruits and vegetables.",
+      image: Fresh,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/SohailShafiq1/Fresh-Berry",
+      live: "https://freshberryuae.com/",
+      featured: false,
+      stats: { stars: 445, views: "25.3K" },
+    },
+    {
+      id: 18,
+      title: "Heer Pigeon",
+      category: "fullstack",
+      description: "A website to track pigeon racing events.",
+      image: Heer,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/SohailShafiq1/Heer-Piegon-Full-stack",
+      live: "https://heerflyingclub.com/",
+      featured: false,
+      stats: { stars: 276, views: "14.2K" },
+    },
+    {
+      id: 19,
+      title: "WealthX Broker",
+      category: "fullstack",
+      description: "A platform for trading stocks and cryptocurrencies.",
+      image: WealthX,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/SohailShafiq1/Trading-App",
+      live: "https://github.com/SohailShafiq1/Trading-App",
+      featured: true,
+      stats: { stars: 523, views: "31.6K" },
+    },
+    {
+      id: 20,
+      title: "E-Tutor",
+      category: "fullstack",
+      description: "An online platform for tutoring and educational resources.",
+      image: Tutor,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/SohailShafiq1/E-Tutor",
+      live: "https://github.com/SohailShafiq1/E-Tutor",
+      featured: false,
+      stats: { stars: 198, views: "12.7K" },
+    },
+    {
+      id: 21,
+      title: "Global Education",
+      category: "web",
+      description: "A Consultancy Website for Global Education.",
+      image: Global,
+      tags: ["React", "JavaScript", "CSS"],
+      github: "https://github.com/SohailShafiq1/GlobalEducation",
+      live: "https://github.com/SohailShafiq1/GlobalEducation",
+      featured: false,
+      stats: { stars: 167, views: "8.5K" },
+    },
+    {
+      id: 22,
+      title: "Sunrays Consultancy",
+      category: "web",
+      description: "A Consultancy Website for Sunrays Consultancy.",
+      image: Sunrays,
+      tags: ["React", "JavaScript", "CSS"],
+      github: "https://github.com/SohailShafiq1/Consultancy",
+      live: "https://www.sunrayconsultants.com/",
+      featured: false,
+      stats: { stars: 289, views: "17.8K" },
+    },
+    {
+      id: 23,
+      title: "CodeHub",
+      category: "fullstack",
+      description:
+        "A collaborative platform for developers to share and learn code.",
+      image: CodeHub,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/Asad-Ullah-Turab/codehub-frontend",
+      live: "https://github.com/Asad-Ullah-Turab/codehub-frontend",
+      featured: true,
+      stats: { stars: 678, views: "42.9K" },
     },
   ];
 
-  const filteredProjects =
+  const filteredProjects = (
     activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category === activeFilter);
+      : projects.filter((project) => project.category === activeFilter)
+  ).sort((a, b) => {
+    // Sort featured projects first
+    if (a.featured === b.featured) return 0;
+    return a.featured ? -1 : 1;
+  });
 
   return (
     <section
