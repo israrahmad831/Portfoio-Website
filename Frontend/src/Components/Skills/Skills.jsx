@@ -66,8 +66,19 @@ export default function Skills() {
       { name: "Tailwind CSS", level: 92, icon: "🎨", experience: "3 years" },
       { name: "JavaScript", level: 94, icon: "🟨", experience: "3 years" },
       { name: "HTML/CSS", level: 96, icon: "🌐", experience: "3 years" },
-      { name: "Vue.js", level: 85, icon: "💚", experience: "1 years" },
+      { name: "React Native", level: 85, icon: "📱", experience: "1 years" },
       { name: "Redux", level: 87, icon: "🔄", experience: "2 years" },
+      { name: "Next.js", level: 90, icon: "▲", experience: "2 years" },
+      {
+        name: "Bootstrap",
+        level: 80,
+        icon: "🅱️",
+        experience: "2 years",
+      },
+      { name: "Sass", level: 82, icon: "🎭", experience: "2 years" },
+      { name: "Webpack", level: 84, icon: "📦", experience: "2 years" },
+      { name: "Jest", level: 80, icon: "🧪", experience: "1 years" },
+      { name: "Figma", level: 89, icon: "🎨", experience: "3 years" },
     ],
     backend: [
       { name: "Node.js", level: 91, icon: "🟢", experience: "3 years" },
@@ -78,6 +89,12 @@ export default function Skills() {
       { name: "REST API", level: 93, icon: "🔌", experience: "3 years" },
       { name: "GraphQL", level: 80, icon: "◈", experience: "1 years" },
       { name: "Firebase", level: 88, icon: "🔥", experience: "2 years" },
+      { name: "Django", level: 81, icon: "🌐", experience: "1 years" },
+      { name: "MySQL", level: 83, icon: "🐬", experience: "2 years" },
+      { name: "Redis", level: 79, icon: "🧠", experience: "1 years" },
+      { name: "PHP", level: 75, icon: "🐘", experience: "1 years" },
+      { name: "Laravel", level: 77, icon: "🌿", experience: "1 years" },
+      { name: "C#", level: 78, icon: "🎯", experience: "1 years" },
     ],
     tools: [
       { name: "Git & GitHub", level: 94, icon: "🔀", experience: "3 years" },
@@ -88,6 +105,7 @@ export default function Skills() {
       { name: "Postman", level: 92, icon: "📮", experience: "2 years" },
       { name: "Linux", level: 85, icon: "🐧", experience: "3 years" },
       { name: "CI/CD", level: 80, icon: "🔄", experience: "1 years" },
+      { name: "Jira", level: 84, icon: "📋", experience: "2 years" },
     ],
   };
 

@@ -398,26 +398,28 @@ export default function Projects() {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-full backdrop-blur-sm max-w-full">
-            <Filter className="text-gray-400 flex-shrink-0" size={16} />
-            {filters.map((filter, index) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${
-                  activeFilter === filter
-                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
-                    : "text-gray-400 hover:text-white hover:bg-gray-700/50"
-                }`}
-                style={{
-                  animation: inView
-                    ? `popIn 0.4s ease-out ${300 + index * 50}ms both`
-                    : "none",
-                }}
-              >
-                {filter.toUpperCase()}
-              </button>
-            ))}
+          <div className="w-full px-2 overflow-x-auto">
+            <div className="inline-flex flex-nowrap items-center justify-start gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-full backdrop-blur-sm min-w-full sm:min-w-fit sm:mx-auto sm:block">
+              <Filter className="text-gray-400 flex-shrink-0" size={16} />
+              {filters.map((filter, index) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                    activeFilter === filter
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
+                      : "text-gray-400 hover:text-white hover:bg-gray-700/50"
+                  }`}
+                  style={{
+                    animation: inView
+                      ? `popIn 0.4s ease-out ${300 + index * 50}ms both`
+                      : "none",
+                  }}
+                >
+                  {filter.toUpperCase()}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
