@@ -64,7 +64,7 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: "2+", label: "Years Experience", icon: Rocket },
+    { number: "3+", label: "Years Experience", icon: Rocket },
     { number: "20+", label: "Projects Completed", icon: Code2 },
     { number: "10+", label: "Happy Clients", icon: Sparkles },
   ];
