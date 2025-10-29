@@ -68,7 +68,6 @@ export default function Skills() {
       { name: "HTML/CSS", level: 96, icon: "🌐", experience: "3 years" },
       { name: "React Native", level: 85, icon: "📱", experience: "1 years" },
       { name: "Redux", level: 87, icon: "🔄", experience: "2 years" },
-      { name: "Next.js", level: 90, icon: "▲", experience: "2 years" },
       {
         name: "Bootstrap",
         level: 80,
