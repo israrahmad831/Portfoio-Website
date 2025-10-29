@@ -398,17 +398,16 @@ export default function Projects() {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          <div className="w-full px-2 overflow-x-auto">
-            <div className="inline-flex flex-nowrap items-center justify-start gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-gray-800/30 border border-gray-700/50 rounded-full backdrop-blur-sm min-w-full sm:min-w-fit sm:mx-auto sm:block">
-              <Filter className="text-gray-400 flex-shrink-0" size={16} />
+          <div className="w-full px-2 sm:px-0 overflow-x-auto sm:overflow-visible flex justify-center">
+            <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 sm:py-3 bg-gradient-to-r from-gray-800/40 to-gray-900/40 backdrop-blur-xl border border-gray-700/30 rounded-xl shadow-lg">
               {filters.map((filter, index) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                  className={`relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm whitespace-nowrap flex-shrink-0 transition-all duration-300 ${
                     activeFilter === filter
-                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
-                      : "text-gray-400 hover:text-white hover:bg-gray-700/50"
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50 scale-105"
+                      : "text-gray-400 hover:text-white hover:bg-gray-700/40"
                   }`}
                   style={{
                     animation: inView
@@ -416,7 +415,10 @@ export default function Projects() {
                       : "none",
                   }}
                 >
-                  {filter.toUpperCase()}
+                  <span className="relative z-10">{filter.toUpperCase()}</span>
+                  {activeFilter === filter && (
+                    <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 blur-md opacity-30 -z-10"></span>
+                  )}
                 </button>
               ))}
             </div>
