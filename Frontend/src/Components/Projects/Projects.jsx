@@ -341,7 +341,7 @@ export default function Projects() {
       image: CodeHub,
       tags: ["React", "Node.js", "Express", "MongoDB"],
       github: "https://github.com/Asad-Ullah-Turab/codehub-frontend",
-      live: "https://github.com/Asad-Ullah-Turab/codehub-frontend",
+      live: "https://codehubfyp.netlify.app/",
       featured: true,
       stats: { stars: 678, views: "42.9K" },
     },
