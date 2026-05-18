@@ -437,17 +437,17 @@ export default function Projects() {
         {/* Filter Tabs */}
         <div
           className={`flex justify-center mb-16 transition-all duration-1000 ${
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            inView ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          <div className="w-full flex justify-center">
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 bg-gradient-to-r from-gray-800/40 to-gray-900/40 backdrop-blur-xl border border-gray-700/30 rounded-xl shadow-lg">
+          <div className="w-full max-w-sm sm:max-w-2xl flex justify-center px-2 sm:px-0">
+            <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-3 sm:px-6 py-3 bg-gradient-to-r from-gray-800/40 to-gray-900/40 backdrop-blur-xl border border-gray-700/30 rounded-xl shadow-lg w-full sm:w-auto">
               {filters.map((filter, index) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-300 ${
+                  className={`relative px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-300 ${
                     activeFilter === filter
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50 scale-105"
                       : "text-gray-400 hover:text-white hover:bg-gray-700/40"
