@@ -30,6 +30,10 @@ import Tutor from "../../assets/tutor.jpeg";
 import Global from "../../assets/global.jpg";
 import Sunrays from "../../assets/Sunrays.png";
 import CodeHub from "../../assets/CodeHub.png";
+import AmstaniCo from "../../assets/AmstaniCo.png";
+import AmstaniWholesale from "../../assets/AmstaniWholesale.png";
+import Justees from "../../assets/Justees.png";
+
 export default function Projects() {
   const [mounted, setMounted] = useState(false);
   const [inView, setInView] = useState(false);
@@ -46,7 +50,7 @@ export default function Projects() {
           setInView(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -344,6 +348,45 @@ export default function Projects() {
       live: "https://codehubfyp.netlify.app/",
       featured: true,
       stats: { stars: 678, views: "42.9K" },
+    },
+    {
+      id: 24,
+      title: "Amstani Wholesale",
+      category: "fullstack",
+      description:
+        "A wholesale storefront with flexible product variants, Stripe payments, and built-in admin and deployment tooling.",
+      image: AmstaniWholesale,
+      tags: ["React", "Node.js", "Stripe", "MongoDB"],
+      github: "",
+      live: "https://www.amstaniwholesale.com",
+      featured: true,
+      stats: { stars: 0, views: "0" },
+    },
+    {
+      id: 25,
+      title: "Amstani & Co",
+      category: "fullstack",
+      description:
+        "A digital textile marketplace connecting shoppers with curated boutiques, live store experiences, and verified store owners across the country.",
+      image: AmstaniCo,
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "",
+      live: "https://amstani-co.vercel.app/",
+      featured: true,
+      stats: { stars: 0, views: "0" },
+    },
+    {
+      id: 26,
+      title: "Justees",
+      category: "web",
+      description:
+        "A premium streetwear brand built for confident self-expression, effortless comfort, and everyday presence.",
+      image: Justees,
+      tags: ["React", "JavaScript", "CSS"],
+      github: "",
+      live: "https://www.justees.store/",
+      featured: true,
+      stats: { stars: 0, views: "0" },
     },
   ];
 
