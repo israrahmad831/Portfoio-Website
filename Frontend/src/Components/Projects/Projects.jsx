@@ -73,7 +73,7 @@ export default function Projects() {
       tags: ["React", "Css", "Firebase"],
       github: "https://github.com/israrahmad831/Divvy",
       live: "https://divvyy.netlify.app/",
-      featured: true,
+      featured: false,
       stats: { stars: 342, views: "15.8K" },
     },
     {
@@ -84,7 +84,7 @@ export default function Projects() {
       image: Tic,
       tags: ["PHP", "JavaScript", "Css"],
       github: "https://github.com/israrahmad831/Tik-Tac-Toe",
-      live: "https://github.com/israrahmad831/Tik-Tac-Toe",
+      live: "",
       featured: false,
       stats: { stars: 127, views: "6.2K" },
     },
@@ -97,7 +97,7 @@ export default function Projects() {
       tags: ["PHP", "JavaScript", "Css"],
       github: "https://github.com/israrahmad831/UraanAI",
       live: "https://uraanpakistan.pk/uraanai/",
-      featured: true,
+      featured: false,
       stats: { stars: 589, views: "28.4K" },
     },
     {
@@ -109,7 +109,7 @@ export default function Projects() {
       image: Business,
       tags: ["React Native", "Firebase", "CLI", "Google Drive"],
       github: "https://github.com/israrahmad831/Business-App",
-      live: "https://github.com/israrahmad831/Business-App",
+      live: "",
       featured: false,
       stats: { stars: 218, views: "11.3K" },
     },
@@ -123,7 +123,7 @@ export default function Projects() {
       image: Wattsun,
       tags: ["React Native", "Firebase", "CLI"],
       github: "https://github.com/israrahmad831/Wattsun",
-      live: "https://github.com/israrahmad831/Wattsun",
+      live: "",
       featured: false,
       stats: { stars: 165, views: "8.9K" },
     },
@@ -136,7 +136,7 @@ export default function Projects() {
       image: Wattsun,
       tags: ["React Native", "Firebase", "CLI"],
       github: "https://github.com/israrahmad831/Wattsun",
-      live: "https://github.com/israrahmad831/Wattsun",
+      live: "",
       featured: false,
       stats: { stars: 173, views: "9.6K" },
     },
@@ -149,7 +149,7 @@ export default function Projects() {
       image: AI,
       tags: ["Python", "Machine Learning", "NLP"],
       github: "https://github.com/israrahmad831/Code-Teacher-Model",
-      live: "https://github.com/israrahmad831/Code-Teacher-Model",
+      live: "",
       featured: false,
       stats: { stars: 412, views: "32.7K" },
     },
@@ -161,7 +161,7 @@ export default function Projects() {
       image: MT2D,
       tags: ["React", "JavaScript"],
       github: "https://github.com/israrahmad831/MT2D",
-      live: "https://github.com/israrahmad831/MT2D",
+      live: "",
       featured: false,
       stats: { stars: 298, views: "19.5K" },
     },
@@ -174,7 +174,7 @@ export default function Projects() {
       image: Learning,
       tags: ["Django", "JavaScript", "CSS"],
       github: "https://github.com/israrahmad831/Learning-Website",
-      live: "https://github.com/israrahmad831/Learning-Website",
+      live: "",
       featured: false,
       stats: { stars: 387, views: "22.1K" },
     },
@@ -187,7 +187,7 @@ export default function Projects() {
       image: Snake,
       tags: ["C++", "graphics", "controls"],
       github: "https://github.com/israrahmad831/Snake-Game",
-      live: "https://github.com/israrahmad831/Snake-Game",
+      live: "",
       featured: false,
       stats: { stars: 156, views: "7.8K" },
     },
@@ -199,7 +199,7 @@ export default function Projects() {
       image: PingPong,
       tags: ["C++", "OOP"],
       github: "https://github.com/israrahmad831/Pong-Game",
-      live: "https://github.com/israrahmad831/Pong-Game",
+      live: "",
       featured: false,
       stats: { stars: 203, views: "10.4K" },
     },
@@ -211,7 +211,7 @@ export default function Projects() {
       image: Sillicom,
       tags: ["React", "JavaScript", "CSS"],
       github: "https://github.com/israrahmad831/SillicomTechnologies",
-      live: "https://github.com/israrahmad831/SillicomTechnologies",
+      live: "",
       featured: false,
       stats: { stars: 241, views: "13.7K" },
     },
@@ -224,7 +224,7 @@ export default function Projects() {
       image: Quiz,
       tags: ["Java", "Swing", "OOP"],
       github: "https://github.com/israrahmad831/Quiz-App",
-      live: "https://github.com/israrahmad831/Quiz-App",
+      live: "",
       featured: false,
       stats: { stars: 189, views: "9.2K" },
     },
@@ -236,7 +236,7 @@ export default function Projects() {
       image: Facilitation,
       tags: ["JavaScript", "Node.js", "Express", "MySQL"],
       github: "https://github.com/israrahmad831/Student-Facilitation-Portal",
-      live: "https://github.com/israrahmad831/Student-Facilitation-Portal",
+      live: "",
       featured: false,
       stats: { stars: 267, views: "16.5K" },
     },
@@ -248,7 +248,7 @@ export default function Projects() {
       image: Chai,
       tags: ["Html", "CSS"],
       github: "https://github.com/israrahmad831/Chai-Khaana",
-      live: "https://github.com/israrahmad831/Chai-Khaana",
+      live: "",
       featured: false,
       stats: { stars: 134, views: "5.4K" },
     },
@@ -260,7 +260,7 @@ export default function Projects() {
       image: Business,
       tags: ["React", "Node.js", "Express", "MongoDB"],
       github: "https://github.com/israrahmad831/Black-Limo-Website",
-      live: "https://israrahmad831.github.io/Black-Limo-Website/",
+      live: "",
       featured: false,
       stats: { stars: 321, views: "18.9K" },
     },
@@ -296,7 +296,7 @@ export default function Projects() {
       image: WealthX,
       tags: ["React", "Node.js", "Express", "MongoDB"],
       github: "https://github.com/SohailShafiq1/Trading-App",
-      live: "https://github.com/SohailShafiq1/Trading-App",
+      live: "",
       featured: true,
       stats: { stars: 523, views: "31.6K" },
     },
@@ -308,7 +308,7 @@ export default function Projects() {
       image: Tutor,
       tags: ["React", "Node.js", "Express", "MongoDB"],
       github: "https://github.com/SohailShafiq1/E-Tutor",
-      live: "https://github.com/SohailShafiq1/E-Tutor",
+      live: "",
       featured: false,
       stats: { stars: 198, views: "12.7K" },
     },
@@ -320,7 +320,7 @@ export default function Projects() {
       image: Global,
       tags: ["React", "JavaScript", "CSS"],
       github: "https://github.com/SohailShafiq1/GlobalEducation",
-      live: "https://github.com/SohailShafiq1/GlobalEducation",
+      live: "",
       featured: false,
       stats: { stars: 167, views: "8.5K" },
     },
@@ -532,22 +532,26 @@ export default function Projects() {
                         : "opacity-0"
                     }`}
                   >
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-full text-white hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-110"
-                    >
-                      <Github size={20} />
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-blue-500 backdrop-blur-sm border border-blue-400 rounded-full text-white hover:bg-blue-600 transition-all duration-300 hover:scale-110"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-full text-white hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-110"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-blue-500 backdrop-blur-sm border border-blue-400 rounded-full text-white hover:bg-blue-600 transition-all duration-300 hover:scale-110"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -579,16 +583,18 @@ export default function Projects() {
                   </div>
 
                   {/* View More Link */}
-                  <a
-                    href={project.live}
-                    className="inline-flex items-center gap-2 text-blue-400 font-medium text-sm group-hover:gap-3 transition-all duration-300"
-                  >
-                    View Project
-                    <ArrowRight
-                      size={16}
-                      className="group-hover:translate-x-1 transition-transform"
-                    />
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      className="inline-flex items-center gap-2 text-blue-400 font-medium text-sm group-hover:gap-3 transition-all duration-300"
+                    >
+                      View Project
+                      <ArrowRight
+                        size={16}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
