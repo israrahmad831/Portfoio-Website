@@ -415,7 +415,7 @@ export default function Projects() {
         {/* Section Header */}
         <div
           className={`text-center mb-12 transition-all duration-1000 ${
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            inView ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-4">
